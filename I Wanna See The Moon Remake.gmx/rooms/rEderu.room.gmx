@@ -505,7 +505,7 @@
     <instance objName="objSaveMedium" x="7440" y="1056" name="inst_EFABBD95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objKillerBlock" x="7360" y="1824" name="inst_C849CD05" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objKillerBlock" x="7552" y="1824" name="inst_05943200" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objOutsideRoomChanger" x="7968" y="736" name="inst_186CA647" locked="0" code="roomTo = rEnd;&#xA;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="7968" y="736" name="inst_186CA647" locked="0" code="roomTo = rForest;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objSaveVHard" x="5648" y="1584" name="inst_3900BA68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objCamera" x="1824" y="1600" name="inst_ACA54BEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objButtonR" x="5056" y="1504" name="inst_8B69543E" locked="0" code="trg = 9;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

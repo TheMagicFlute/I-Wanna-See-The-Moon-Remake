@@ -7,9 +7,9 @@ global.debugControl = false;    //Sets whether to require control to be held for
 global.debugDeathSpeed = 50;    //Sets how many frames after getting hit for god mode to effect the player (50 frames = 1 second, 1 frame = chainsaw mode)
 
 //Updates
-global.checkForUpdates = false;
-global.versionDataUrl = "https://pastebin.com/raw/Z5sWFNap";
-global.gameVersion = "1.2.01";
+global.checkForUpdates = true;
+global.versionDataUrl = "https://raw.githubusercontent.com/TheMagicFlute/I-Wanna-See-The-Moon-Remake/main/IWSTM-current-version.json";
+global.gameVersion = "1.2.02";
 
 //Menu
 global.menuMode = 0;                //Sets whether to use a warp room or a menu for selecting the game's difficulty (0 = warp room, 1 = menu)
@@ -17,6 +17,7 @@ global.menuSound = sndJump;         //Sets what sound to use for navigating the 
 
 //World
 global.startRoom = rDiffSelect;         //Sets which room to begin with
+// global.startRoom = rForest;         // For Test
 global.roomCaptionDef = "I Wanna See The Moon Remake";  //Sets default window caption (only works with the Professional version of Studio)
 global.deathMusicMode = 1;          //Sets whether or not to play death music when the player dies (0 = no death music, 1 = instantly pause current music, 2 = fade out current music)
 global.pauseDelayLength = 40;       //Sets the delay in frames in which the player can pause/unpause the game (can be set to 0 to disable pause delay)
@@ -52,7 +53,3 @@ global.difficultyNames[4] = "Death";
 //Savefiles
 global.extraSaveProtection = false; //Sets whether to use the ds_map_secure functions for saving/loading (improves save security and prevents transferring between PCs)
 global.md5StrAdd = "TheMagicFlute_FarmerStewie"; //sets what to add to the end of md5 input string to make the save harder to mess with, can be changed to anything, should be set to something unique and hard to predict (like setting a password)
-
-global.diff = 0; // 0: normal; 1: more needles;
-global.cn3Save = 1; // let the saver style be changed to cn3
-global.te = 1;

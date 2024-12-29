@@ -55,7 +55,9 @@ global.gameClear = global.saveMap[? "gameClear"];
 
 //LOAD NEW SAVED VALUES HERE
 global.diff = global.saveMap[? "diff"];
-global.te = global.saveMap[? "te"];
+global.canViewMap = global.saveMap[? "canViewMap"];
+global.forestSpdUp = global.saveMap[? "forestSpdUp"];
+global.forestPlatform = global.saveMap[? "forestPlatform"];
 
 var player = instance_create(global.saveMap[? "playerX"], global.saveMap[? "playerY"], objPlayer);
 with (player)

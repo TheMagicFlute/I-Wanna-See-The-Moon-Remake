@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.te == 0)
+            <string>if (global.canViewMap == 0)
 {
     instance_destroy();
 }
@@ -51,7 +51,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.te == 1)
+            <string>if(global.canViewMap)
 {
     if(place_meeting(x,y,objPlayer) == true){
         if (objMap.image_alpha &lt; 1)

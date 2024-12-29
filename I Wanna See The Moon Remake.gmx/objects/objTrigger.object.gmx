@@ -129,6 +129,7 @@ draw_set_font(fDefault12);
 if (global.debugMode)
 {
     scrDrawTextOutline(x, y, "trg: " + string(trg), c_white, c_black);
+    scrDrawTextOutline(x, y + 20, "key: " + string(key), c_white, c_black);
 }
 </string>
           </argument>

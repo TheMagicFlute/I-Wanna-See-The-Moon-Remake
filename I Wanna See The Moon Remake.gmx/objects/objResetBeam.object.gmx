@@ -29,6 +29,7 @@
 other.highGrav = false
 other.highSpeed = false
 other.numJumps = 2
+other.forestHighSpd = false;
 </string>
           </argument>
         </arguments>

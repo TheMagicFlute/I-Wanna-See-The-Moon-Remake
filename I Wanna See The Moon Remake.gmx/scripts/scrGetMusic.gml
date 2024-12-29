@@ -15,6 +15,9 @@ switch (room)                       //Determines which song to play
     case rEderu:
         roomSong = musEderu;
         break;
+    case rForest:
+        roomSong = musForest;
+        break;
 
 
 

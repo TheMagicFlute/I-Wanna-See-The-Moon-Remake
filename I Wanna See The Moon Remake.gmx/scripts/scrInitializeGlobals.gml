@@ -4,8 +4,8 @@
 scrSetGlobalOptions();
 
 global.debugOverlay = true;    //Enables showing the debug text overlay (shows player location, align, etc.)
-global.debugNoDeath = false;    //Enables god mode (toggle with Home key)
-global.debugInfJump = false;    //Enables infinite jump (toggle with End key)
+global.debugNoDeath = true;    //Enables god mode (toggle with Home key)
+global.debugInfJump = true;    //Enables infinite jump (toggle with End key)
 global.debugShowHitbox = false; //Enables showing the player's hitbox (toggle with Del key)
 
 global.roomCaptionLast = global.roomCaptionDef;
@@ -20,6 +20,13 @@ global.time = 0;
 global.timeMicro = 0;
 global.grav = 1;
 
+// Game variables
+global.diff = 0; // 0: normal; 1: more needles;
+global.cn3Save = 1; // let the style of these save points change to CN3 style
+global.canViewMap = 0; // 0: can't view map; 1: can view map
+global.forestSpdUp = 0; // 0: disabled; 1: enable the spd up line
+global.forestPlatform = 0; // 0: disabled; 1: can go to the ocean
+
 for (var i = global.secretItemTotal - 1; i >= 0; i--)
 {
     global.secretItem[i] = false;
@@ -33,6 +40,8 @@ for (var i = global.bossItemTotal - 1; i >= 0; i--)
 global.gameClear = false;
 
 global.trigger = ds_map_create();
+
+global.door = ds_map_create();
 
 global.gameStarted = false;     //Determines whether the game is in progress (enables saving, restarting, etc.)
 global.noPause = false;         //Used to prevent pausing, for example in bossfights

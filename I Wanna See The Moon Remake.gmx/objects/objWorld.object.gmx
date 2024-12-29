@@ -371,7 +371,7 @@ if (Id == global.httpUpdateCheck)
         var map = json_decode(result);
         if (map != -1)
         {
-            global.newestVersionNumber = map[? "game-version"];
+            global.newestVersionNumber = map[? "IWSTMR-current-version"];
             global.newestVersionLink = map[? "download-link"];
             if (!is_undefined(global.newestVersionNumber) &amp;&amp; !is_undefined(global.newestVersionLink))
             {

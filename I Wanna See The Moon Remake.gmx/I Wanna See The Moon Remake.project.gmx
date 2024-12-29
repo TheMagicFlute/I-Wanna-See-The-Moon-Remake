@@ -122,6 +122,7 @@
     <sounds name="IWSTMR">
       <sound>sound\musTitle</sound>
       <sound>sound\musEderu</sound>
+      <sound>sound\musForest</sound>
     </sounds>
     <sounds name="cn3">
       <sound>sound\sndPlasma_SaveBlockerSound</sound>
@@ -433,6 +434,7 @@
       <sprite>sprites\sprPlayerBack</sprite>
       <sprites name="logos">
         <sprite>sprites\sprLogoEderu</sprite>
+        <sprite>sprites\sprLogoForest</sprite>
       </sprites>
       <sprite>sprites\sprCloud</sprite>
       <sprite>sprites\sprTree</sprite>
@@ -450,6 +452,15 @@
       <sprite>sprites\sprButtonL0</sprite>
       <sprite>sprites\sprCherryYellow</sprite>
       <sprite>sprites\sprCherryOrange</sprite>
+      <sprite>sprites\sprCherryGreen</sprite>
+      <sprite>sprites\sprForstMask0</sprite>
+      <sprite>sprites\sprForestDoor</sprite>
+      <sprite>sprites\sprFloorForest0</sprite>
+      <sprite>sprites\sprFloorForest1</sprite>
+      <sprite>sprites\sprCherryBlue</sprite>
+      <sprite>sprites\sprM9</sprite>
+      <sprite>sprites\sprSpikeYellowUp</sprite>
+      <sprite>sprites\sprSpikeYellowDown</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -471,6 +482,11 @@
       <background>background\bgBoard</background>
       <background>background\bgEderu</background>
       <background>background\bgDarkBlue</background>
+      <background>background\bgGreen</background>
+      <background>background\bgForest</background>
+      <background>background\bgGreenTree</background>
+      <background>background\bgForestWater0</background>
+      <background>background\bgForestWater1</background>
     </backgrounds>
     <background>background\bgAll</background>
     <background>background\bgWall</background>
@@ -488,6 +504,9 @@
       <path>paths\pthEderuCherry0</path>
       <path>paths\pthUp2</path>
       <path>paths\pthEderuCherry1</path>
+      <path>paths\pthForestCherry2</path>
+      <path>paths\pthForestCherryYellow</path>
+      <path>paths\pthForestCherry3</path>
     </paths>
   </paths>
   <scripts name="scripts">
@@ -921,8 +940,9 @@
     </objects>
     <objects name="IWSTMR">
       <objects name="logos">
-        <object>objects\objLogoEderu</object>
         <object>objects\objLogo</object>
+        <object>objects\objLogoEderu</object>
+        <object>objects\objLogoForest</object>
       </objects>
       <objects name="diff">
         <object>objects\objDiffKiller</object>
@@ -976,6 +996,31 @@
         <object>objects\objUpBlock1</object>
         <object>objects\objCherryPth1</object>
       </objects>
+      <objects name="Forest">
+        <object>objects\objForestMask0</object>
+        <object>objects\objForestDoor</object>
+        <object>objects\objForestCherry</object>
+        <object>objects\objForestLine</object>
+        <object>objects\objForestFloorUp0</object>
+        <object>objects\objForestFloorUp1</object>
+        <object>objects\objForestTrapDown</object>
+        <object>objects\objForestCherry1left</object>
+        <object>objects\objForestCherry2left</object>
+        <object>objects\objForestCherry2bound</object>
+        <object>objects\objForestCherry2Bomb</object>
+        <object>objects\objForestCherry2Boomer</object>
+        <object>objects\objForestCherryYellow</object>
+        <object>objects\objTrgTrackMaker</object>
+        <object>objects\objForestTrapCherry0</object>
+        <object>objects\objForestTrapCherry1</object>
+        <object>objects\objForestTrapCherry1Up</object>
+        <object>objects\objForestTrapCherry2</object>
+        <object>objects\objForestTrapCherry2Down</object>
+        <object>objects\objForestPlatform</object>
+        <object>objects\objForestSwitcher</object>
+        <object>objects\objForestCherryLast0</object>
+        <object>objects\objForestCherryLast1</object>
+      </objects>
       <object>objects\objTrgParent</object>
       <object>objects\objPlayerBack</object>
       <object>objects\objBoard</object>
@@ -985,6 +1030,14 @@
       <object>objects\objBrokenBlock</object>
       <object>objects\objButtonR</object>
       <object>objects\objButtonL</object>
+      <object>objects\objCherry_Bound</object>
+      <object>objects\objBadBlockGreen</object>
+      <object>objects\objBrokenBlockGreen</object>
+      <object>objects\objCherryTrgFree</object>
+      <object>objects\objCherryTrack</object>
+      <object>objects\objInvisM9</object>
+      <object>objects\objSpikeYellowUp</object>
+      <object>objects\objSpikeYellowDown</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -999,6 +1052,8 @@
     </rooms>
     <rooms name="IWSTMR">
       <room>rooms\rEderu</room>
+      <room>rooms\rForest</room>
+      <room>rooms\rOcean</room>
     </rooms>
     <rooms name="Sample">
       <room>rooms\rTestHub</room>

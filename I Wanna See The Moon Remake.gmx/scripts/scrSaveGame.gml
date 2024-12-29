@@ -53,7 +53,9 @@ if (savePosition)
     
     //ADD NEW SAVED VALUES HERE
     global.saveMap[? "diff"] = global.diff;
-    global.saveMap[? "te"] = global.te;
+    global.saveMap[? "canViewMap"] = global.canViewMap;
+    global.saveMap[? "forestSpdUp"] = global.forestSpdUp;
+    global.saveMap[? "forestPlatform"] = global.forestPlatform;
     
 }
                      

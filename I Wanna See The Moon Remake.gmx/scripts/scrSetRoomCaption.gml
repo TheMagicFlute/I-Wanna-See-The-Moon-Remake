@@ -6,6 +6,21 @@ var roomCaption = global.roomCaptionDef;
 if (global.gameStarted)
 {
     roomCaption += " -"
+    if (global.difficulty == 0)
+        roomCaption += " Easy ";
+    else if (global.difficulty == 1)
+        roomCaption += " Normal ";
+    else if (global.difficulty == 2)
+        roomCaption += " Hard ";
+    else if (global.difficulty == 3)
+        roomCaption += " Death ";
+
+    if (global.diff == 0)
+        roomCaption += " Normal Mode";
+    else if (global.diff == 1)
+        roomCaption += " Difficult Mode";
+
+    roomCaption += " -"
     roomCaption += " Deaths: " + string(global.death);
     roomCaption += " Time: ";
     
