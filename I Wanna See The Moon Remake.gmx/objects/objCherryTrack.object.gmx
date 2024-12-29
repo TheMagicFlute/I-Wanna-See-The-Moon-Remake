@@ -28,6 +28,7 @@
             <string>image_speed = 1 / 15;
 var beginTrg = -1;
 var endTrg = -1;
+var endDestroy = 0;
 var destroy = 0;
 </string>
           </argument>
@@ -138,6 +139,10 @@ else
 {
     alarm[0] = 1;
     global.trigger[? beginTrg] = false;
+}
+if (global.trigger[? endTrg] &amp;&amp; endDestroy)
+{
+    instance_destroy();
 }
 </string>
           </argument>
