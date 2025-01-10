@@ -79,3 +79,28 @@ else
     file_text_write_string(file, base64_encode(json_encode(global.saveMap)));
     file_text_close(file);  
 }
+
+
+// ONLINE part
+if (global.__ONLINE_ENABLED)
+{
+    if (!objWorld.__ONLINE_race)
+    {
+        if (argument0)
+        {
+            hbuffer_clear(objWorld.__ONLINE_hbuffer);
+            __ONLINE_p = objPlayer;
+            if instance_exists(__ONLINE_p)
+            {
+                hbuffer_write_uint8(objWorld.__ONLINE_hbuffer, 5);
+                hbuffer_write_uint8(objWorld.__ONLINE_hbuffer, global.grav);
+                __ONLINE_tempx = __ONLINE_p.x * 10 + objWorld.__ONLINE_tea;
+                hbuffer_write_int32(objWorld.__ONLINE_hbuffer, __ONLINE_tempx);
+                hbuffer_write_float64(objWorld.__ONLINE_hbuffer, __ONLINE_p.y);
+                hbuffer_write_int16(objWorld.__ONLINE_hbuffer, room);
+                socket_write_message(objWorld.__ONLINE_socket, objWorld.__ONLINE_hbuffer);
+            }
+        }
+    }
+}
+

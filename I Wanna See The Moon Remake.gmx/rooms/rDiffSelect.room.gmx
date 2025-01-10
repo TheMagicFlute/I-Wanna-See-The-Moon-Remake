@@ -56,12 +56,11 @@
     <instance objName="objBlock" x="32" y="512" name="inst_AD81F043" locked="0" code="" scaleX="23" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="32" y="32" name="inst_85EA5BF8" locked="0" code="" scaleX="1" scaleY="16" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="736" y="32" name="inst_71181A30" locked="0" code="" scaleX="1" scaleY="16" colour="4294967295" rotation="0"/>
-    <instance objName="objInitTrg" x="352" y="416" name="inst_EFBA148C" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="160" y="384" name="inst_EF8DDCF9" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="160" y="384" name="inst_294C61EB" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="512" y="384" name="inst_7F8F78C0" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDiffWarp" x="576" y="352" name="inst_7C8E1A82" locked="0" code="mode = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objDiffWarp" x="224" y="352" name="inst_4F32B701" locked="0" code="mode = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDiffWarp" x="224" y="352" name="inst_4F32B701" locked="0" code="mode = 0;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bAllTiles" x="0" y="0" w="32" h="32" xo="32" yo="32" id="10003175" name="inst_080071AC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

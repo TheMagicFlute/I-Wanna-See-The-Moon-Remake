@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="4" name="datafiles">
-    <datafiles number="4" name="Music">
+  <datafiles number="5" name="datafiles">
+    <datafiles number="5" name="Music">
       <datafile>
         <name>musGuyRock.ogg</name>
         <exists>-1</exists>
@@ -74,9 +74,27 @@
         <filename>musOnDeath.ogg</filename>
       </datafile>
     </datafiles>
+    <datafile>
+      <name>DBGHELP.dll</name>
+      <exists>-1</exists>
+      <size>81962</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>DBGHELP.dll</filename>
+    </datafile>
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\GMSched</extension>
+    <extension index="1">extensions\Http Dll 2.3</extension>
   </NewExtensions>
   <sounds name="sound">
     <sounds name="Sfx">
@@ -123,10 +141,15 @@
       <sound>sound\musTitle</sound>
       <sound>sound\musEderu</sound>
       <sound>sound\musForest</sound>
+      <sound>sound\musOcean</sound>
     </sounds>
     <sounds name="cn3">
       <sound>sound\sndPlasma_SaveBlockerSound</sound>
       <sound>sound\sndPlasma_SaveSound</sound>
+    </sounds>
+    <sounds name="ONLINE">
+      <sound>sound\__ONLINE_sndChatbox</sound>
+      <sound>sound\__ONLINE_sndSaved</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -429,12 +452,23 @@
       <sprite>sprites\sprPlasma_SaveMediumFlip</sprite>
       <sprite>sprites\sprPlasma_SaveVHard</sprite>
       <sprite>sprites\sprPlasma_SaveVHardFlip</sprite>
+      <sprite>sprites\sprPlasma_fancyWarpCore</sprite>
+      <sprite>sprites\sprPlasma_fancyWarpParticle</sprite>
+      <sprite>sprites\sprPlasma_warpBlock</sprite>
+      <sprite>sprites\sprPlasma_warpLight</sprite>
+      <sprite>sprites\sprPlasma_warpLocation</sprite>
+      <sprite>sprites\sprPlasma_warpMonolith</sprite>
+      <sprite>sprites\sprPlasma_warpTransitionShape</sprite>
+      <sprite>sprites\sprPlasma_warpUnlock</sprite>
+      <sprite>sprites\sprPlasma_waterCherryFFH</sprite>
+      <sprite>sprites\sprPlasma_waterFFH</sprite>
     </sprites>
     <sprites name="IWSTMR">
       <sprite>sprites\sprPlayerBack</sprite>
       <sprites name="logos">
         <sprite>sprites\sprLogoEderu</sprite>
         <sprite>sprites\sprLogoForest</sprite>
+        <sprite>sprites\sprLogoOcean</sprite>
       </sprites>
       <sprite>sprites\sprCloud</sprite>
       <sprite>sprites\sprTree</sprite>
@@ -450,17 +484,21 @@
       <sprite>sprites\sprObama03</sprite>
       <sprite>sprites\sprButtonR0</sprite>
       <sprite>sprites\sprButtonL0</sprite>
-      <sprite>sprites\sprCherryYellow</sprite>
       <sprite>sprites\sprCherryOrange</sprite>
+      <sprite>sprites\sprCherryYellow</sprite>
       <sprite>sprites\sprCherryGreen</sprite>
+      <sprite>sprites\sprCherryAzure</sprite>
+      <sprite>sprites\sprCherryBlue</sprite>
       <sprite>sprites\sprForstMask0</sprite>
       <sprite>sprites\sprForestDoor</sprite>
       <sprite>sprites\sprFloorForest0</sprite>
       <sprite>sprites\sprFloorForest1</sprite>
-      <sprite>sprites\sprCherryBlue</sprite>
       <sprite>sprites\sprM9</sprite>
       <sprite>sprites\sprSpikeYellowUp</sprite>
       <sprite>sprites\sprSpikeYellowDown</sprite>
+      <sprite>sprites\sprWaterSwitcher</sprite>
+      <sprite>sprites\sprWarpBlue</sprite>
+      <sprite>sprites\sprWarpGreen</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -472,24 +510,31 @@
     <background>background\bStars</background>
     <background>background\bTestRoomTiles</background>
     <backgrounds name="IWSTMR">
-      <background>background\bgSeeTheMoon</background>
+      <backgrounds name="background">
+        <background>background\bgSeeTheMoon</background>
+        <background>background\bgMoon</background>
+        <background>background\bgEderu</background>
+        <background>background\bgForest</background>
+        <background>background\bgOcean</background>
+      </backgrounds>
+      <backgrounds name="tiles">
+        <background>background\bgDarkBlue</background>
+        <background>background\bgGreen</background>
+        <background>background\bgWall</background>
+        <background>background\bgDark</background>
+        <background>background\bgDarkBackground</background>
+      </backgrounds>
       <background>background\bgWIWST</background>
       <background>background\bgWMoon</background>
       <background>background\bgWPressShift</background>
-      <background>background\bgMoon</background>
       <background>background\bgNormal</background>
       <background>background\bgDifficult</background>
       <background>background\bgBoard</background>
-      <background>background\bgEderu</background>
-      <background>background\bgDarkBlue</background>
-      <background>background\bgGreen</background>
-      <background>background\bgForest</background>
       <background>background\bgGreenTree</background>
       <background>background\bgForestWater0</background>
       <background>background\bgForestWater1</background>
     </backgrounds>
     <background>background\bgAll</background>
-    <background>background\bgWall</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pathExample</path>
@@ -611,6 +656,12 @@
     <font>fonts\fDefault12</font>
   </fonts>
   <objects name="objects">
+    <objects name="ONLINE">
+      <object>objects\objStartONLINE</object>
+      <object>objects\__ONLINE_onlinePlayer</object>
+      <object>objects\__ONLINE_chatbox</object>
+      <object>objects\__ONLINE_playerSaved</object>
+    </objects>
     <objects name="World">
       <object>objects\objWorld</object>
       <object>objects\objCamera</object>
@@ -937,12 +988,16 @@
       <object>objects\objPlasma_SaveMediumFlip</object>
       <object>objects\objPlasma_SaveVHard</object>
       <object>objects\objPlasma_SaveVHardFlip</object>
+      <object>objects\objPlasma_fancyWarp</object>
+      <object>objects\objPlasma_fancyWarpBlup</object>
+      <object>objects\objPlasma_fancyWarpPart</object>
     </objects>
     <objects name="IWSTMR">
       <objects name="logos">
         <object>objects\objLogo</object>
         <object>objects\objLogoEderu</object>
         <object>objects\objLogoForest</object>
+        <object>objects\objLogoOcean</object>
       </objects>
       <objects name="diff">
         <object>objects\objDiffKiller</object>
@@ -1010,7 +1065,6 @@
         <object>objects\objForestCherry2Bomb</object>
         <object>objects\objForestCherry2Boomer</object>
         <object>objects\objForestCherryYellow</object>
-        <object>objects\objTrgTrackMaker</object>
         <object>objects\objForestTrapCherry0</object>
         <object>objects\objForestTrapCherry1</object>
         <object>objects\objForestTrapCherry1Up</object>
@@ -1021,10 +1075,13 @@
         <object>objects\objForestCherryLast0</object>
         <object>objects\objForestCherryLast1</object>
       </objects>
+      <objects name="Ocean">
+        <object>objects\objWarpToOcean</object>
+        <object>objects\objWarpToEderu</object>
+      </objects>
       <object>objects\objTrgParent</object>
       <object>objects\objPlayerBack</object>
       <object>objects\objBoard</object>
-      <object>objects\objInitTrg</object>
       <object>objects\objDiffWarp</object>
       <object>objects\objBadBlock</object>
       <object>objects\objBrokenBlock</object>

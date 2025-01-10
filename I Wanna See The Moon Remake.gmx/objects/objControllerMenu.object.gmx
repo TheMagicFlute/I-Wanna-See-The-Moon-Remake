@@ -228,7 +228,7 @@ for (var i = 0; i &lt; numberOfButtons - 2; i++)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(scrTernary(!global.gameStarted, c_black, c_white));
+            <string>draw_set_color(scrTernary(!global.gameStarted, c_white, c_white));
 draw_set_valign(fa_top);
 draw_set_font(fDefault24);
 

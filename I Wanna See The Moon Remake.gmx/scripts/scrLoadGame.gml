@@ -66,3 +66,27 @@ with (player)
 }
 
 room_goto(asset_get_index(global.saveMap[? "room"]));
+
+
+// ONLINE part
+
+if (global.__ONLINE_ENABLED)
+{
+    if (objWorld.__ONLINE_sSaved)
+    {
+        if (room_exists(objWorld.__ONLINE_sRoom))
+        {
+            __ONLINE_p = objPlayer;
+            if (global.grav != objWorld.__ONLINE_sGravity)
+            {
+                with (__ONLINE_p) event_user(0);
+            }
+            __ONLINE_p = objPlayer;
+            __ONLINE_p.x = objWorld.__ONLINE_sX;
+            __ONLINE_p.y = objWorld.__ONLINE_sY;
+            room_goto(objWorld.__ONLINE_sRoom);
+        }
+        objWorld.__ONLINE_sSaved = 0;
+    }
+}
+

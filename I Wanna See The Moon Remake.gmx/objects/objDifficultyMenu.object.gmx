@@ -157,6 +157,14 @@ for (var i = 0; i &lt; 3; i++)
 
 animationIndex++;
 
+
+// debug quick load
+if (global.debugMode &amp;&amp; file_exists("Data\save1"))
+{
+    global.savenum = 1;
+    scrLoadGame(true);
+}
+
 if (scrButtonCheckPressed(KEY.MENU_OPTIONS))
 {
     global.menuSelectPrev[0] = savefileSelect;
@@ -380,7 +388,7 @@ for(var i = 0; i &lt; 3; i++)
         draw_sprite(sprCherry, animationIndex/15, xx+125,   y+310);
     }
 }
-
+draw_set_color(c_white);
 scrDrawButtonInfo(true);
 </string>
           </argument>

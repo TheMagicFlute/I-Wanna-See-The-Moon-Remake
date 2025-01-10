@@ -36,6 +36,53 @@ if (instance_number(object_index) &gt; 1)
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// ONLINE
+__ONLINE_connected = 0;
+__ONLINE_hbuffer = hbuffer_create();
+__ONLINE_selfID = "";
+__ONLINE_name = "";
+__ONLINE_selfGameID = "iwannaseethemoonremake";
+__ONLINE_server = "";
+__ONLINE_version = "1.1.9";
+__ONLINE_race = 0;
+__ONLINE_vis = 0;
+__ONLINE_team = "";
+__ONLINE_tea = 0;
+__ONLINE_socket = socket_create();
+    
+__ONLINE_pExists = 0;
+__ONLINE_pX = 0;
+__ONLINE_pY = 0;
+__ONLINE_t = 0;
+__ONLINE_heartbeat = 0;
+__ONLINE_stoppedFrames = 0;
+__ONLINE_sGravity = 0;
+__ONLINE_sX = 0;
+__ONLINE_sY = 0;
+__ONLINE_sRoom = 0;
+__ONLINE_sSaved = 0;
+    
+__ONLINE_udpsocket = udpsocket_create();
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="2" enumb="1">
       <action>
@@ -331,12 +378,297 @@ if (keyboard_check_pressed(vk_f5) &amp;&amp; !global.gamePaused) //Reset window 
 if (keyboard_check_pressed(vk_backspace) &amp;&amp; !global.gamePaused)    //Toggle debug overlay
 {
     global.debugOverlay = !global.debugOverlay;
+    global.showONLINEinfo = !global.showONLINEinfo;
 }
 
 if (keyboard_check(vk_control) &amp;&amp; keyboard_check_pressed(ord("M")) &amp;&amp; !global.gamePaused) //Toggle mute music setting
 {
     scrToggleMusic();
     scrSaveConfig();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// ONLINE
+if (global.__ONLINE_ENABLED)
+{
+    socket_update_read(__ONLINE_socket);
+    while socket_read_message(__ONLINE_socket, __ONLINE_hbuffer)
+    {
+        switch hbuffer_read_uint8(__ONLINE_hbuffer)
+        {
+            case 0:
+                __ONLINE_ID = hbuffer_read_string(__ONLINE_hbuffer);
+                __ONLINE_found = 0;
+                __ONLINE_i = 0;
+                while (__ONLINE_i &lt; instance_number(__ONLINE_onlinePlayer) &amp;&amp; (!__ONLINE_found))
+                {
+                    if ((instance_find(__ONLINE_onlinePlayer, __ONLINE_i)).__ONLINE_ID == __ONLINE_ID)
+                        __ONLINE_found = 1;
+                    __ONLINE_i += 1;
+                }
+                if (!__ONLINE_found)
+                {
+                    __ONLINE_oPlayer = instance_create(0, 0, __ONLINE_onlinePlayer);
+                    __ONLINE_oPlayer.__ONLINE_ID = __ONLINE_ID;
+                    __ONLINE_oPlayer.__ONLINE_name = hbuffer_read_string(__ONLINE_hbuffer);
+                }
+                break;
+            case 1:
+                __ONLINE_ID = hbuffer_read_string(__ONLINE_hbuffer);
+                __ONLINE_found = 0;
+                __ONLINE_i = 0;
+                while (__ONLINE_i &lt; instance_number(__ONLINE_onlinePlayer) &amp;&amp; (!__ONLINE_found))
+                {
+                    __ONLINE_oPlayer = instance_find(__ONLINE_onlinePlayer, __ONLINE_i);
+                    if (__ONLINE_oPlayer.__ONLINE_ID == __ONLINE_ID)
+                    {
+                        with (__ONLINE_oPlayer)
+                            instance_destroy();
+                        __ONLINE_found = 1;
+                    }
+                    __ONLINE_i += 1;
+                }
+                break;
+            case 2:
+                __ONLINE_lastVersion = hbuffer_read_string(__ONLINE_hbuffer);
+                __ONLINE_errorMessage = "Your tool uses the version " + __ONLINE_version + " but the oldest compatible version is " + __ONLINE_lastVersion + ". Please update your tool.";
+                show_message(__ONLINE_errorMessage);
+                game_end();
+                exit;
+            case 4:
+                __ONLINE_ID = hbuffer_read_string(__ONLINE_hbuffer);
+                __ONLINE_found = 0;
+                __ONLINE_oPlayer = objWorld;
+                __ONLINE_i = 0;
+                while (__ONLINE_i &lt; instance_number(__ONLINE_onlinePlayer) &amp;&amp; (!__ONLINE_found))
+                {
+                    __ONLINE_oPlayer = instance_find(__ONLINE_onlinePlayer, __ONLINE_i);
+                    if (__ONLINE_oPlayer.__ONLINE_ID == __ONLINE_ID)
+                        __ONLINE_found = 1;
+                    __ONLINE_i += 1;
+                }
+                if (__ONLINE_found)
+                {
+                    __ONLINE_message = hbuffer_read_string(__ONLINE_hbuffer);
+                    __ONLINE_oChatbox = instance_create(0, 0, __ONLINE_chatbox);
+                    __ONLINE_oChatbox.__ONLINE_message = __ONLINE_message;
+                    __ONLINE_oChatbox.__ONLINE_follower = __ONLINE_oPlayer;
+                    if (__ONLINE_oPlayer.visible)
+                        audio_play_sound(__ONLINE_sndChatbox, 0, false);
+                }
+                break;
+            case 5:
+                if (!__ONLINE_race)
+                {
+                    __ONLINE_sGravity = hbuffer_read_uint8(__ONLINE_hbuffer);
+                    __ONLINE_sName = hbuffer_read_string(__ONLINE_hbuffer);
+                    __ONLINE_sXX = hbuffer_read_int32(__ONLINE_hbuffer);
+                    if ((__ONLINE_sXX % 10) == __ONLINE_tea)
+                    {
+                        __ONLINE_sSaved = 1;
+                        __ONLINE_sX = floor(__ONLINE_sXX / 10);
+                        __ONLINE_sY = hbuffer_read_float64(__ONLINE_hbuffer);
+                        __ONLINE_sRoom = hbuffer_read_int16(__ONLINE_hbuffer);
+                        __ONLINE_a = instance_create(0, 0, __ONLINE_playerSaved);
+                        __ONLINE_a.__ONLINE_name = __ONLINE_sName;
+                        __ONLINE_a.__ONLINE_state = -1;
+                        audio_play_sound(__ONLINE_sndSaved, 0, false);
+                    }
+                }
+                break;
+            case 6:
+                __ONLINE_selfID = hbuffer_read_string(__ONLINE_hbuffer);
+                break;
+        }
+    
+    }
+    __ONLINE_mustQuit = 0;
+    switch socket_get_state(__ONLINE_socket)
+    {
+        case 2:
+            if (!__ONLINE_connected)
+                __ONLINE_connected = 1;
+            break
+        case 4:
+            show_message("Connection closed.");
+            __ONLINE_mustQuit = 1;
+            break;
+        case 5:
+            socket_reset(__ONLINE_socket)
+            __ONLINE_errorMessage = "Could not connect to the server.";
+            if (__ONLINE_connected)
+                __ONLINE_errorMessage = "Connection lost";
+            show_message(__ONLINE_errorMessage);
+            __ONLINE_mustQuit = 1;
+            break;
+    }
+    
+    if (__ONLINE_mustQuit)
+    {
+        game_end();
+        exit;
+    }
+    __ONLINE_p = objPlayer;
+    __ONLINE_exists = instance_exists(__ONLINE_p);
+    __ONLINE_X = __ONLINE_pX;
+    __ONLINE_Y = __ONLINE_pY;
+    if (__ONLINE_exists)
+    {
+        if (__ONLINE_exists != __ONLINE_pExists)
+        {
+            hbuffer_clear(__ONLINE_hbuffer);
+            hbuffer_write_uint8(__ONLINE_hbuffer, 0);
+            socket_write_message(__ONLINE_socket, __ONLINE_hbuffer);
+        }
+        __ONLINE_X = __ONLINE_p.x;
+        __ONLINE_Y = __ONLINE_p.y;
+        __ONLINE_stoppedFrames += 1;
+        if (__ONLINE_pX != __ONLINE_X || __ONLINE_pY != __ONLINE_Y || keyboard_check_released(vk_anykey) || keyboard_check_pressed(vk_anykey))
+            __ONLINE_stoppedFrames = 0;
+        if (__ONLINE_stoppedFrames &lt; 5 || __ONLINE_t &lt; 3)
+        {
+            if (__ONLINE_t &gt;= 3)
+                __ONLINE_t = 0;
+            if (__ONLINE_selfID != "")
+            {
+                hbuffer_clear(__ONLINE_hbuffer);
+                hbuffer_write_uint8(__ONLINE_hbuffer, 1);
+                hbuffer_write_string(__ONLINE_hbuffer, __ONLINE_selfID);
+                hbuffer_write_string(__ONLINE_hbuffer, __ONLINE_selfGameID);
+                hbuffer_write_uint16(__ONLINE_hbuffer, room);
+                hbuffer_write_uint64(__ONLINE_hbuffer, current_time);
+                hbuffer_write_int32(__ONLINE_hbuffer, __ONLINE_X);
+                hbuffer_write_int32(__ONLINE_hbuffer, __ONLINE_Y);
+                hbuffer_write_int32(__ONLINE_hbuffer, __ONLINE_p.sprite_index);
+                hbuffer_write_float32(__ONLINE_hbuffer, __ONLINE_p.image_speed);
+                hbuffer_write_float32(__ONLINE_hbuffer, (__ONLINE_p.image_xscale * __ONLINE_p.xScale));
+                hbuffer_write_float32(__ONLINE_hbuffer, (__ONLINE_p.image_yscale * global.grav));
+                hbuffer_write_float32(__ONLINE_hbuffer, __ONLINE_p.image_angle);
+                hbuffer_write_string(__ONLINE_hbuffer, __ONLINE_name);
+                udpsocket_send(__ONLINE_udpsocket, __ONLINE_hbuffer);
+            }
+        }
+        __ONLINE_t += 1;
+        if (keyboard_check_pressed(vk_space))
+        {
+            __ONLINE_message = get_string("Say something:", "");
+            __ONLINE_message = string_replace_all(__ONLINE_message, "#", "\#");
+            __ONLINE_message_length = string_length(__ONLINE_message);
+            if (__ONLINE_message_length == 0)
+            {
+                __ONLINE_message = __ONLINE_team;
+                __ONLINE_message_length = string_length(__ONLINE_message);
+            }
+            if (__ONLINE_message_length &gt; 0)
+            {
+                __ONLINE_message_max_length = 300;
+                if (__ONLINE_message_length &gt; __ONLINE_message_max_length)
+                    __ONLINE_message = string_copy(__ONLINE_message, 0, __ONLINE_message_max_length);
+                hbuffer_clear(__ONLINE_hbuffer);
+                hbuffer_write_uint8(__ONLINE_hbuffer, 4);
+                hbuffer_write_string(__ONLINE_hbuffer, __ONLINE_message);
+                socket_write_message(__ONLINE_socket, __ONLINE_hbuffer);
+                __ONLINE_oChatbox = instance_create(0, 0, __ONLINE_chatbox);
+                __ONLINE_oChatbox.__ONLINE_message = __ONLINE_message;
+                __ONLINE_oChatbox.__ONLINE_follower = __ONLINE_p;
+                audio_play_sound(__ONLINE_sndChatbox, 0, false);
+            }
+        }
+    }
+    else if (__ONLINE_exists != __ONLINE_pExists)
+    {
+        hbuffer_clear(__ONLINE_hbuffer);
+        hbuffer_write_uint8(__ONLINE_hbuffer, 1);
+        socket_write_message(__ONLINE_socket, __ONLINE_hbuffer);
+    }
+    __ONLINE_pExists = __ONLINE_exists;
+    __ONLINE_pX = __ONLINE_X;
+    __ONLINE_pY = __ONLINE_Y;
+    __ONLINE_heartbeat += (1 / room_speed);
+    if (__ONLINE_heartbeat &gt; 3)
+    {
+        __ONLINE_heartbeat = 0;
+        hbuffer_clear(__ONLINE_hbuffer);
+        hbuffer_write_uint8(__ONLINE_hbuffer, 2);
+        socket_write_message(__ONLINE_socket, __ONLINE_hbuffer);
+    }
+    socket_update_write(__ONLINE_socket);
+    while udpsocket_receive(__ONLINE_udpsocket, __ONLINE_hbuffer)
+    {
+        switch hbuffer_read_uint8(__ONLINE_hbuffer)
+        {
+            case 1:
+                __ONLINE_ID = hbuffer_read_string(__ONLINE_hbuffer);
+                __ONLINE_gameID = hbuffer_read_string(__ONLINE_hbuffer);
+                __ONLINE_found = 0;
+                __ONLINE_oPlayer = objWorld;
+                __ONLINE_i = 0;
+                while (__ONLINE_i &lt; instance_number(__ONLINE_onlinePlayer) &amp;&amp; (!__ONLINE_found))
+                {
+                    __ONLINE_oPlayer = instance_find(__ONLINE_onlinePlayer, __ONLINE_i);
+                    if (__ONLINE_oPlayer.__ONLINE_ID == __ONLINE_ID)
+                        __ONLINE_found = 1;
+                    __ONLINE_i += 1;
+                }
+                if (!__ONLINE_found)
+                {
+                    __ONLINE_oPlayer = instance_create(0, 0, __ONLINE_onlinePlayer);
+                    __ONLINE_oPlayer.__ONLINE_ID = __ONLINE_ID;
+                }
+                __ONLINE_oPlayer.__ONLINE_oRoom = hbuffer_read_uint16(__ONLINE_hbuffer);
+                __ONLINE_syncTime = hbuffer_read_uint64(__ONLINE_hbuffer);
+                if (__ONLINE_oPlayer.__ONLINE_syncTime &lt; __ONLINE_syncTime)
+                {
+                    __ONLINE_oPlayer.__ONLINE_syncTime = __ONLINE_syncTime;
+                    __ONLINE_oPlayer.x = hbuffer_read_int32(__ONLINE_hbuffer);
+                    __ONLINE_oPlayer.y = hbuffer_read_int32(__ONLINE_hbuffer);
+                    __ONLINE_oPlayer.sprite_index = hbuffer_read_int32(__ONLINE_hbuffer);
+                    __ONLINE_oPlayer.image_speed = hbuffer_read_float32(__ONLINE_hbuffer);
+                    __ONLINE_oPlayer.image_xscale = hbuffer_read_float32(__ONLINE_hbuffer);
+                    __ONLINE_oPlayer.image_yscale = hbuffer_read_float32(__ONLINE_hbuffer);
+                    __ONLINE_oPlayer.image_angle = hbuffer_read_float32(__ONLINE_hbuffer);
+                    __ONLINE_oPlayer.__ONLINE_name = hbuffer_read_string(__ONLINE_hbuffer);
+                }
+                break;
+            default:
+                show_message("Received unexpected data from the server.");
+        }
+    }
+    if (udpsocket_get_state(__ONLINE_udpsocket) != 1)
+    {
+        show_message("Connection to the UDP socket lost.");
+        game_end();
+        exit;
+    }
+    if keyboard_check_pressed(ord("V"))
+    {
+        if (__ONLINE_vis == 0)
+            __ONLINE_vis = 1;
+        else if (__ONLINE_vis == 1)
+            __ONLINE_vis = 2;
+        else if (__ONLINE_vis == 2)
+            __ONLINE_vis = 0;
+        __ONLINE_a = instance_create(0, 0, __ONLINE_playerSaved);
+        __ONLINE_a.__ONLINE_state = __ONLINE_vis;
+    }
 }
 </string>
           </argument>
@@ -457,6 +789,31 @@ global.vineToggle = 0
 if global.grav == 1 {
     global.invertControls = false
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hbuffer_destroy(__ONLINE_hbuffer);
+socket_destroy(__ONLINE_socket);
+udpsocket_destroy(__ONLINE_udpsocket);
 </string>
           </argument>
         </arguments>
@@ -590,25 +947,23 @@ else if (global.debugOverlay)
     var drawDiff = 0;
     
     if (instance_exists(objPlayer))
-    {   
+    {
+        //set draw left or right
+        if (objPlayer.x &lt; (view_xview[0] + 400))
+        {
+            xOff = 780;
+            draw_set_halign(fa_right)
+        }
+        else if (objPlayer.x &gt;= (view_xview[0] + 400))
+        {
+            xOff = 20;
+            draw_set_halign(fa_left);
+        }
         drawX = objPlayer.x;
         drawH = objPlayer.hspeed;
         drawY = objPlayer.y;
         drawV = objPlayer.vspeed;
         drawnJ = objPlayer.numJumps;
-        
-        //set draw left or right
-        if (objPlayer.x &lt; (view_xview[0] + 400))
-        {
-            xOff = 780
-            draw_set_halign(fa_right)
-        }
-        else if (objPlayer.x &gt; (view_xview[0] + 400))
-        {
-            xOff = 20
-            draw_set_halign(fa_left)
-        }
-        
         
         if (!global.infJump &amp;&amp; !global.debugInfJump)
             drawdJ = objPlayer.djump;
@@ -632,9 +987,12 @@ else if (global.debugOverlay)
         if (global.debugMode)
         {
             scrDrawTextOutline(xOff,120+(global.debugMode*20),"Room: "+room_get_name(room)+" (No."+string(room)+")",c_white,c_black);
-            //scrDrawTextOutline(xOff,160,"God Mode: "+string(global.debugNoDeath),c_white,c_black);
+            scrDrawTextOutline(xOff,140,"God Mode: "+string(global.debugNoDeath),c_white,c_black);
             //scrDrawTextOutline(xOff,120+(global.debugMode*40),"Infinite Jump: "+string(global.debugInfJump),c_white,c_black);
-            scrDrawTextOutline(xOff,120+(global.debugMode*40),"Jumps: "+string(drawnJ)+" (Dj: "+string(drawdJ)+")",c_white,c_black);
+            //scrDrawTextOutline(xOff,120+(global.debugMode*40),"Jumps: "+string(drawnJ)+" (Dj: "+string(drawdJ)+")",c_white,c_black);
+            scrDrawTextOutline(xOff,160,"Infinite Jump: "+string(global.debugInfJump),c_white,c_black);
+            scrDrawTextOutline(xOff,180,"Jumps: "+string(drawnJ)+" (Dj: "+string(drawdJ)+")",c_white,c_black);
+
         }
         scrDrawTextOutline(xOff,200,"Diff: "+string(drawDiff)+"º",c_white,c_black);
     }
@@ -731,6 +1089,65 @@ if (global.gamePaused)
         with(objControllerMenu)
         {
             event_perform(ev_draw, 0);
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw ONLINE info
+
+draw_set_color(c_black);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_font(fDefault12);
+
+//set draw left or right
+if (global.showONLINEinfo)
+{
+    if (instance_exists(objPlayer))
+    {
+        //set draw left or right
+        if (objPlayer.x &lt; (view_xview[0] + 400))
+        {
+            xOff = 780;
+            draw_set_halign(fa_right)
+        }
+        else if (objPlayer.x &gt;= (view_xview[0] + 400))
+        {
+            xOff = 20;
+            draw_set_halign(fa_left);
+        }
+        drawName = __ONLINE_name;
+        drawServer = __ONLINE_server;
+        drawTeam = __ONLINE_team;
+        if (__ONLINE_race) drawRace = "ON";
+        else drawRace = "OFF";
+        drawONLINE_enabled = global.__ONLINE_ENABLED;
+        if (!global.gamePaused)
+        {
+            scrDrawTextOutline(xOff,240,"ONLINE enabled: "+string(drawONLINE_enabled),c_white,c_black);
+            scrDrawTextOutline(xOff,260,"Plaer Name: "+drawName,c_white,c_black);
+            scrDrawTextOutline(xOff,280,"Server: "+drawServer,c_white,c_black);
+            scrDrawTextOutline(xOff,300,"Team: "+drawTeam,c_white,c_black);
+            scrDrawTextOutline(xOff,320,"Racing Mode: "+drawRace,c_white,c_black);
         }
     }
 }

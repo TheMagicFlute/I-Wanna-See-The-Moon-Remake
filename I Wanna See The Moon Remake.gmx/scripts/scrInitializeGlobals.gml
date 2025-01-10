@@ -26,6 +26,8 @@ global.cn3Save = 1; // let the style of these save points change to CN3 style
 global.canViewMap = 0; // 0: can't view map; 1: can view map
 global.forestSpdUp = 0; // 0: disabled; 1: enable the spd up line
 global.forestPlatform = 0; // 0: disabled; 1: can go to the ocean
+global.door = ds_map_create();
+global.water = ds_map_create();
 
 for (var i = global.secretItemTotal - 1; i >= 0; i--)
 {
@@ -40,8 +42,6 @@ for (var i = global.bossItemTotal - 1; i >= 0; i--)
 global.gameClear = false;
 
 global.trigger = ds_map_create();
-
-global.door = ds_map_create();
 
 global.gameStarted = false;     //Determines whether the game is in progress (enables saving, restarting, etc.)
 global.noPause = false;         //Used to prevent pausing, for example in bossfights

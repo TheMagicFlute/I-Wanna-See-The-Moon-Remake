@@ -1,15 +1,15 @@
 ///Sets configurable global options
 
 //Debug
-global.debugMode = true;        //Enables debug keys (check objWorld step to see all of them), make sure to set this to "false" before releasing your game
+global.debugMode = false;        //Enables debug keys (check objWorld step to see all of them), make sure to set this to "false" before releasing your game
 global.debugVisuals = false;     //Enables changing the color/alpha of player when infjump/god mode are toggled, make sure to disable this if you want to change the player's image_alpha or image_blend
 global.debugControl = false;    //Sets whether to require control to be held for certain debug options (used to prevent accidental usage of debug binds with things such as numpadding, or fat fingering)
 global.debugDeathSpeed = 50;    //Sets how many frames after getting hit for god mode to effect the player (50 frames = 1 second, 1 frame = chainsaw mode)
 
 //Updates
 global.checkForUpdates = true;
-global.versionDataUrl = "https://raw.githubusercontent.com/TheMagicFlute/I-Wanna-See-The-Moon-Remake/main/IWSTM-current-version.json";
-global.gameVersion = "1.2.02";
+global.versionDataUrl = "https://raw.githubusercontent.com/TheMagicFlute/I-Wanna-See-The-Moon-Remake/refs/heads/main/IWSTMR-current-version.json";
+global.gameVersion = "1.2.03";
 
 //Menu
 global.menuMode = 0;                //Sets whether to use a warp room or a menu for selecting the game's difficulty (0 = warp room, 1 = menu)
@@ -28,14 +28,14 @@ global.blocksCrush = true;          //Makes getting stuck in the wall due to mov
 
 //Player
 global.adAlign = false;             //Sets whether or not to enable A/D align
-global.edgeDeath = false;            //Sets whether to kill the player when he leaves the boundaries of the room
+global.edgeDeath = true;            //Sets whether to kill the player when he leaves the boundaries of the room
 global.directionalTapFix = false;   //Sets whether to change the behavior of tapping left/right for less than 1 frame (by default the player does not move when this happens, enabling this always moves the player for 1 frame when left/right is tapped)
 global.strictSaveBlockers = true;   //Bullets check for saveblocker collision when created instead of only after a frame of movement
 global.fixBulletHeight = true;      //Spawns bullets 3px higher, accurate to where the gun is.
 
 //Items
-global.secretItemTotal = 8;         //Sets how many secret items for the game to save/load
-global.bossItemTotal = 8;           //Sets how many boss items for the game to save/load
+global.secretItemTotal = 0;         //Sets how many secret items for the game to save/load
+global.bossItemTotal = 0;           //Sets how many boss items for the game to save/load
 global.autosaveSecretItems = false; //Sets whether to save secret items immediately when you grab them or if you have to hit a save
 
 //Controller
@@ -53,3 +53,7 @@ global.difficultyNames[4] = "Death";
 //Savefiles
 global.extraSaveProtection = false; //Sets whether to use the ds_map_secure functions for saving/loading (improves save security and prevents transferring between PCs)
 global.md5StrAdd = "TheMagicFlute_FarmerStewie"; //sets what to add to the end of md5 input string to make the save harder to mess with, can be changed to anything, should be set to something unique and hard to predict (like setting a password)
+
+// ONLINE
+global.showONLINEinfo = false; // Set to true to show online info in screen
+global.__ONLINE_ENABLED = false; // Set to true to enable online features
