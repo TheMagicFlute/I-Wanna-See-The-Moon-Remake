@@ -4,7 +4,9 @@ enum SKIN
     DEFAULT,
     DOTKID,
     VVV,
-    YOSHI
+    YOSHI,
+    FULL,
+    OUTLINE
 }
 
 switch(argument0)
@@ -19,22 +21,28 @@ switch(argument0)
         break;
     
     case SKIN.DOTKID:
-        if global.playerV {
-            sprIdle  = sprDotkidOutlinedV;
-            sprRun   = sprDotkidOutlinedV;
-            sprFall  = sprDotkidOutlinedV;
-            sprJump  = sprDotkidOutlinedV;
-            sprSlide = sprDotkidOutlinedV;
-            sprClimb = sprDotkidOutlinedV;
-        }
-        else {
-            sprIdle  = sprDotkidOutlined;
-            sprRun   = sprDotkidOutlined;
-            sprFall  = sprDotkidOutlined;
-            sprJump  = sprDotkidOutlined;
-            sprSlide = sprDotkidOutlined;
-            sprClimb = sprDotkidOutlined;
-        }
+        // if global.playerV {
+        //     sprIdle  = sprDotkidOutlinedV;
+        //     sprRun   = sprDotkidOutlinedV;
+        //     sprFall  = sprDotkidOutlinedV;
+        //     sprJump  = sprDotkidOutlinedV;
+        //     sprSlide = sprDotkidOutlinedV;
+        //     sprClimb = sprDotkidOutlinedV;
+        // }
+        // else {
+        //     sprIdle  = sprDotkidOutlined;
+        //     sprRun   = sprDotkidOutlined;
+        //     sprFall  = sprDotkidOutlined;
+        //     sprJump  = sprDotkidOutlined;
+        //     sprSlide = sprDotkidOutlined;
+        //     sprClimb = sprDotkidOutlined;
+        // }
+        sprRun   = sprDotkid;
+        sprIdle  = sprDotkid;
+        sprFall  = sprDotkid;
+        sprJump  = sprDotkid;
+        sprSlide = sprDotkid;
+        sprClimb = sprDotkid;
         break;
         
     case SKIN.VVV:
@@ -53,5 +61,22 @@ switch(argument0)
         sprJump  = sprYoshiJump;
         sprSlide = sprYoshiFall; //yoshi doesn't slide on vines
         sprClimb = sprYoshiFall; //yoshi doesn't climb (aint got no arms)
+        break;
+    case SKIN.FULL:
+        sprIdle  = sprPlayerIdleFull;
+        sprRun   = sprPlayerRunFull;
+        sprFall  = sprPlayerFallFull;
+        sprJump  = sprPlayerJumpFull;
+        sprSlide = sprPlayerSlideFull;
+        sprClimb = sprPlayerClimbFull;
+        break;
+    case SKIN.OUTLINE:
+        sprIdle  = sprPlayerIdleOutline;
+        sprRun   = sprPlayerRunOutline;
+        sprFall  = sprPlayerFallOutline;
+        sprJump  = sprPlayerJumpOutline;
+        sprSlide = sprPlayerSlideOutline;
+        sprClimb = sprPlayerClimbOutline;
+        break
         break;
 }

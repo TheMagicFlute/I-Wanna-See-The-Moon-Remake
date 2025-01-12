@@ -1,15 +1,15 @@
 ///Sets configurable global options
 
 //Debug
-global.debugMode = false;        //Enables debug keys (check objWorld step to see all of them), make sure to set this to "false" before releasing your game
+global.debugMode = true;        //Enables debug keys (check objWorld step to see all of them), make sure to set this to "false" before releasing your game
 global.debugVisuals = false;     //Enables changing the color/alpha of player when infjump/god mode are toggled, make sure to disable this if you want to change the player's image_alpha or image_blend
 global.debugControl = false;    //Sets whether to require control to be held for certain debug options (used to prevent accidental usage of debug binds with things such as numpadding, or fat fingering)
 global.debugDeathSpeed = 50;    //Sets how many frames after getting hit for god mode to effect the player (50 frames = 1 second, 1 frame = chainsaw mode)
 
 //Updates
 global.checkForUpdates = true;
-global.versionDataUrl = "https://raw.githubusercontent.com/TheMagicFlute/I-Wanna-See-The-Moon-Remake/refs/heads/main/IWSTMR-current-version.json";
-global.gameVersion = "1.2.03";
+global.versionDataUrl = "https://raw.githubusercontent.com/TheMagicFlute/sI-Wanna-See-The-Moon-Remake/refs/heads/main/IWSTMR-current-version.json";
+global.gameVersion = "1.2.04";
 
 //Menu
 global.menuMode = 0;                //Sets whether to use a warp room or a menu for selecting the game's difficulty (0 = warp room, 1 = menu)
@@ -54,6 +54,6 @@ global.difficultyNames[4] = "Death";
 global.extraSaveProtection = false; //Sets whether to use the ds_map_secure functions for saving/loading (improves save security and prevents transferring between PCs)
 global.md5StrAdd = "TheMagicFlute_FarmerStewie"; //sets what to add to the end of md5 input string to make the save harder to mess with, can be changed to anything, should be set to something unique and hard to predict (like setting a password)
 
-// ONLINE
-global.showONLINEinfo = false; // Set to true to show online info in screen
-global.__ONLINE_ENABLED = false; // Set to true to enable online features
+global.cn3Save = true; // let the style of these save points change to CN3 style
+global.dotkidUnlock = true; // enable to change to the dotkid be unlocked
+global.bowEnabled = false; // control whether to enable the bow

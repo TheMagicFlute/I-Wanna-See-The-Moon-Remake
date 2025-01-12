@@ -146,6 +146,7 @@
     <sounds name="cn3">
       <sound>sound\sndPlasma_SaveBlockerSound</sound>
       <sound>sound\sndPlasma_SaveSound</sound>
+      <sound>sound\sndCostumeSwitch</sound>
     </sounds>
     <sounds name="ONLINE">
       <sound>sound\__ONLINE_sndChatbox</sound>
@@ -176,6 +177,7 @@
         <sprite>sprites\sprDotkidChanger</sprite>
         <sprite>sprites\sprDotkidOutlined</sprite>
         <sprite>sprites\sprDotkidOutlinedV</sprite>
+        <sprite>sprites\sprDotkid</sprite>
         <sprite>sprites\sprPlayerMaskDot</sprite>
       </sprites>
       <sprites name="VKid">
@@ -192,13 +194,32 @@
         <sprite>sprites\sprTelekidEnable</sprite>
         <sprite>sprites\sprTelekidDisable</sprite>
       </sprites>
+      <sprites name="Normal">
+        <sprite>sprites\sprPlayerIdle_</sprite>
+        <sprite>sprites\sprPlayerJump_</sprite>
+        <sprite>sprites\sprPlayerFall_</sprite>
+        <sprite>sprites\sprPlayerRun_</sprite>
+        <sprite>sprites\sprPlayerSlide_</sprite>
+        <sprite>sprites\sprPlayerClimb_</sprite>
+      </sprites>
+      <sprites name="FullColor">
+        <sprite>sprites\sprPlayerFallFull</sprite>
+        <sprite>sprites\sprPlayerIdleFull</sprite>
+        <sprite>sprites\sprPlayerJumpFull</sprite>
+        <sprite>sprites\sprPlayerRunFull</sprite>
+        <sprite>sprites\sprPlayerSlideFull</sprite>
+        <sprite>sprites\sprPlayerClimbFull</sprite>
+      </sprites>
+      <sprites name="OutlineColor">
+        <sprite>sprites\sprPlayerFallOutline</sprite>
+        <sprite>sprites\sprPlayerIdleOutline</sprite>
+        <sprite>sprites\sprPlayerJumpOutline</sprite>
+        <sprite>sprites\sprPlayerRunOutline</sprite>
+        <sprite>sprites\sprPlayerSlideOutline</sprite>
+        <sprite>sprites\sprPlayerClimbOutline</sprite>
+      </sprites>
       <sprite>sprites\sprPlayerMask</sprite>
       <sprite>sprites\sprPlayerMaskFlip</sprite>
-      <sprite>sprites\sprPlayerIdle_</sprite>
-      <sprite>sprites\sprPlayerJump_</sprite>
-      <sprite>sprites\sprPlayerFall_</sprite>
-      <sprite>sprites\sprPlayerRun_</sprite>
-      <sprite>sprites\sprPlayerSlide_</sprite>
       <sprite>sprites\sprPlayerSlide</sprite>
       <sprite>sprites\sprPlayerIdle</sprite>
       <sprite>sprites\sprPlayerJump</sprite>
@@ -465,6 +486,11 @@
     </sprites>
     <sprites name="IWSTMR">
       <sprite>sprites\sprPlayerBack</sprite>
+      <sprites name="Doors">
+        <sprite>sprites\sprDoorBoss1</sprite>
+        <sprite>sprites\sprDoorBoss2</sprite>
+        <sprite>sprites\sprDoorToSpecticalSpace</sprite>
+      </sprites>
       <sprites name="logos">
         <sprite>sprites\sprLogoEderu</sprite>
         <sprite>sprites\sprLogoForest</sprite>
@@ -499,6 +525,7 @@
       <sprite>sprites\sprWaterSwitcher</sprite>
       <sprite>sprites\sprWarpBlue</sprite>
       <sprite>sprites\sprWarpGreen</sprite>
+      <sprite>sprites\sprOceanWater</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -544,7 +571,6 @@
     <paths name="IWSTMR">
       <path>paths\pthEderuTrap1</path>
       <path>paths\pthEderuTrap2</path>
-      <path>paths\pthUp0</path>
       <path>paths\pthUp1</path>
       <path>paths\pthEderuCherry0</path>
       <path>paths\pthUp2</path>
@@ -552,6 +578,7 @@
       <path>paths\pthForestCherry2</path>
       <path>paths\pthForestCherryYellow</path>
       <path>paths\pthForestCherry3</path>
+      <path>paths\pthUp5x32</path>
     </paths>
   </paths>
   <scripts name="scripts">
@@ -993,6 +1020,11 @@
       <object>objects\objPlasma_fancyWarpPart</object>
     </objects>
     <objects name="IWSTMR">
+      <objects name="Doors">
+        <object>objects\objDoorBoss1</object>
+        <object>objects\objDoorBoss2</object>
+        <object>objects\objDoorToSpecticalSpace</object>
+      </objects>
       <objects name="logos">
         <object>objects\objLogo</object>
         <object>objects\objLogoEderu</object>
@@ -1076,8 +1108,13 @@
         <object>objects\objForestCherryLast1</object>
       </objects>
       <objects name="Ocean">
+        <object>objects\objTrgOcean0</object>
         <object>objects\objWarpToOcean</object>
         <object>objects\objWarpToEderu</object>
+        <object>objects\objWaterSwicher</object>
+        <object>objects\objOceanWater</object>
+        <object>objects\objOceanTrapCherry0</object>
+        <object>objects\objOceanTrapCherry1</object>
       </objects>
       <object>objects\objTrgParent</object>
       <object>objects\objPlayerBack</object>

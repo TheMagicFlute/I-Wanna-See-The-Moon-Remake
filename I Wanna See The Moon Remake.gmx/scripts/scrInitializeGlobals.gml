@@ -4,8 +4,8 @@
 scrSetGlobalOptions();
 
 global.debugOverlay = true;    //Enables showing the debug text overlay (shows player location, align, etc.)
-global.debugNoDeath = true;    //Enables god mode (toggle with Home key)
-global.debugInfJump = true;    //Enables infinite jump (toggle with End key)
+global.debugNoDeath = false;    //Enables god mode (toggle with Home key)
+global.debugInfJump = false;    //Enables infinite jump (toggle with End key)
 global.debugShowHitbox = false; //Enables showing the player's hitbox (toggle with Del key)
 
 global.roomCaptionLast = global.roomCaptionDef;
@@ -22,12 +22,34 @@ global.grav = 1;
 
 // Game variables
 global.diff = 0; // 0: normal; 1: more needles;
-global.cn3Save = 1; // let the style of these save points change to CN3 style
-global.canViewMap = 0; // 0: can't view map; 1: can view map
-global.forestSpdUp = 0; // 0: disabled; 1: enable the spd up line
-global.forestPlatform = 0; // 0: disabled; 1: can go to the ocean
-global.door = ds_map_create();
-global.water = ds_map_create();
+global.canViewMap = false; // false: can't view map; true: can view map
+global.playerColor = 0.5;
+globalvar skin;
+skin = SKIN.DEFAULT;
+global.dotkid = false;
+global.fireBullet = false; // false: disabled; true: can shoot fire bullets
+global.frozenNeedleDestroyed = false; // false: not destroyed; true: destroyed
+global.forestSpdUp = false; // false: disabled; true: enable the spd up line
+global.forestPlatform = false; // false: disabled; true: can go to the ocean
+global.cloudEye = false; // false: disabled; true: can enter the castle
+global.keyToSpecticalSpace = false; // false: disabled; true: enable the key
+global.DoorToSpecticalSpaceDestroyed = false; // false: not destroyed; true: destroyed
+
+global.door = ds_map_create(); // control the forest doors
+global.water = ds_map_create(); // control the ocean water
+
+// Bosses and Assassins variables (use these to instead of the bosses array)
+global.boss1 = false;
+global.boss2 = false;
+global.assassins1 = false;
+global.assassins2 = false;
+global.assassins3 = false;
+global.boss3 = false;
+global.boss4 = false;
+
+// ONLINE
+global.showONLINEinfo = false; // Set to true to show online info in screen
+global.__ONLINE_ENABLED = false; // Set to true to enable online features
 
 for (var i = global.secretItemTotal - 1; i >= 0; i--)
 {

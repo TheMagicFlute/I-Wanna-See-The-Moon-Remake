@@ -159,11 +159,11 @@ animationIndex++;
 
 
 // debug quick load
-if (global.debugMode &amp;&amp; file_exists("Data\save1"))
-{
-    global.savenum = 1;
-    scrLoadGame(true);
-}
+//if (global.debugMode &amp;&amp; file_exists("Data\save1"))
+//{
+//    global.savenum = 1;
+//    scrLoadGame(true);
+//}
 
 if (scrButtonCheckPressed(KEY.MENU_OPTIONS))
 {

@@ -975,26 +975,30 @@ else if (global.debugOverlay)
         
         drawAngle = objPlayer.image_angle;
         drawDiff = global.diff;
+        drawDK = global.dotkid;
+        drawPlayerColor = global.playerColor;
     }
 
     scrDrawTextOutline(xOff,20,"FPS: "+string(fps)+" (R: "+string(fps_real)+")",c_white,c_black);
     if (!global.gamePaused)
     {
-        scrDrawTextOutline(xOff,40,"X: "+string(drawX)+" (h: "+string(drawH)+")",c_white,c_black);
-        scrDrawTextOutline(xOff,60,"Y: "+string(drawY)+" (v: "+string(drawV)+")",c_white,c_black);
+        scrDrawTextOutline(xOff,40,"playerX: "+string(drawX)+" (hspeed: "+string(drawH)+")",c_white,c_black);
+        scrDrawTextOutline(xOff,60,"playerY: "+string(drawY)+" (vspeed: "+string(drawV)+")",c_white,c_black);
         scrDrawTextOutline(xOff,80,"Align: "+string(drawAlign)+" (e: "+string(drawAlignReal)+")",c_white,c_black);
         scrDrawTextOutline(xOff,100,"Angle: "+string(drawAngle)+"º",c_white,c_black);
         if (global.debugMode)
         {
-            scrDrawTextOutline(xOff,120+(global.debugMode*20),"Room: "+room_get_name(room)+" (No."+string(room)+")",c_white,c_black);
-            scrDrawTextOutline(xOff,140,"God Mode: "+string(global.debugNoDeath),c_white,c_black);
+            //scrDrawTextOutline(xOff,120+(global.debugMode*20),"Room: "+room_get_name(room)+" (No."+string(room)+")",c_white,c_black);
+            scrDrawTextOutline(xOff,120,"Room: "+"No."+string(room)+" "+room_get_name(room),c_white,c_black);
+            scrDrawTextOutline(xOff,140,"No Death: "+string(global.debugNoDeath),c_white,c_black);
             //scrDrawTextOutline(xOff,120+(global.debugMode*40),"Infinite Jump: "+string(global.debugInfJump),c_white,c_black);
             //scrDrawTextOutline(xOff,120+(global.debugMode*40),"Jumps: "+string(drawnJ)+" (Dj: "+string(drawdJ)+")",c_white,c_black);
-            scrDrawTextOutline(xOff,160,"Infinite Jump: "+string(global.debugInfJump),c_white,c_black);
+            scrDrawTextOutline(xOff,160,"Inf Jump: "+string(global.debugInfJump),c_white,c_black);
             scrDrawTextOutline(xOff,180,"Jumps: "+string(drawnJ)+" (Dj: "+string(drawdJ)+")",c_white,c_black);
 
         }
-        scrDrawTextOutline(xOff,200,"Diff: "+string(drawDiff)+"º",c_white,c_black);
+        scrDrawTextOutline(xOff,200,"Diff: "+string(drawDiff),c_white,c_black);
+        scrDrawTextOutline(xOff,240,"DK: "+string(drawDK)+"Color: "+string(drawPlayerColor),c_white,c_black);
     }
 }
 </string>

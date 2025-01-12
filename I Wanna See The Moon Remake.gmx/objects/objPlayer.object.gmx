@@ -213,7 +213,6 @@ if ((bbox_right &lt; 0 || bbox_left &gt; room_width || bbox_bottom &lt; 0 || bbo
 }
 
 //Special player skins
-var skin = SKIN.DEFAULT;
 if global.dotkid {
     skin = SKIN.DOTKID;
 }
@@ -223,6 +222,66 @@ else if global.playerV || global.telekid {
 else if instance_exists(objYoshiControl) {
     skin = SKIN.YOSHI;
 }
+
+if (keyboard_check_pressed(ord("B")))
+{
+    global.bowEnabled = !global.bowEnabled;
+}
+
+if (keyboard_check_pressed(ord("1")))
+{
+    if (skin != SKIN.DEFAULT)
+    {
+        if (global.dotkid)
+        {
+            y -= 8;
+            global.dotkid = false;
+        }
+        skin = SKIN.DEFAULT;
+        audio_play_sound(sndCostumeSwitch, 0, false);
+    }
+}
+else if (keyboard_check_pressed(ord("2")))
+{
+    if (skin != SKIN.FULL)
+    {
+        if (global.dotkid)
+        {
+            y -= 8;
+            global.dotkid = false;
+        }
+        skin = SKIN.FULL;
+        audio_play_sound(sndCostumeSwitch, 0, false);
+    }
+}
+else if (keyboard_check_pressed(ord("3")))
+{
+    if (skin != SKIN.OUTLINE)
+    {
+        if (global.dotkid)
+        {
+            y -= 8;
+            global.dotkid = false;
+        }
+        skin = SKIN.OUTLINE;
+        audio_play_sound(sndCostumeSwitch, 0, false);
+    }
+}
+else if (global.dotkidUnlock &amp;&amp; keyboard_check_pressed(ord("0")) &amp;&amp; room != rDifficultySelect &amp;&amp; room != rDiffSelect)
+{
+    if (skin != SKIN.DOTKID)
+    {
+        global.dotkid = true;
+        skin = SKIN.DOTKID;
+        audio_play_sound(sndCostumeSwitch, 0, false);
+    }
+}
+if (skin == SKIN.DOTKID)
+{
+    global.dotkid = true;
+}
+
+scrSetPlayerMask();
 scrGetPlayerSkin(skin);
 
 var notOnBlock = (place_free(x, y + global.grav));
@@ -828,6 +887,58 @@ vspeed -= gravity;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// change color
+
+var delta, hh, ss, vv;
+delta = 0.004;
+if (skin == SKIN.DOTKID || skin == SKIN.FULL || skin == SKIN.OUTLINE)
+{
+    if (scrButtonCheck(KEY.UP))
+    {
+        //show_message("up");
+        global.playerColor += delta;
+    }
+    else if (scrButtonCheck(KEY.DOWN))
+    {    
+        //show_message("down");
+        global.playerColor -= delta;
+    }
+    global.playerColor = clamp(global.playerColor, 0, 1);
+    hh = ((global.playerColor * 4) * 256);
+    if (global.playerColor &lt; 0.5)
+    {
+        ss = 255;
+        vv = lerp(0, 255, (global.playerColor * 2));
+    }
+    else
+    {
+        ss = lerp(255, 0, ((global.playerColor - 0.5) * 2));
+        vv = 255;
+    }
+    image_blend = make_color_hsv(hh, ss, vv);
+}
+else
+    image_blend = c_white;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="4" ename="objPlatform">
       <action>
@@ -951,6 +1062,9 @@ if (global.autosave) //Save the game if currently set to autosave
 var drawX = floor(x + 0.5);
 var drawY = floor(y + 0.5);
 var drawColor = c_white;
+drawColor = image_blend;
+
+//draw_set_blend_mode(1);
 
 if global.playerV {
     drawColor = make_color_rgb(1,164,217) // blue color from original V kid sprite
@@ -973,7 +1087,9 @@ if instance_exists(objKeypickControl) &amp;&amp; objKeypickControl.usingMaster {
  
 // draw dotkid   
 if global.dotkid {
-    var spr = scrTernary(global.playerV, sprDotkidOutlinedV, sprDotkidOutlined);
+    //var spr = scrTernary(global.playerV, sprDotkidOutlinedV, sprDotkidOutlined);
+    spr = sprDotkidOutlinedV;
+    //spr = sprDotkid;
     draw_sprite_ext(spr, 0, drawX, drawY, image_xscale, image_yscale * global.grav, image_angle, drawColor, image_alpha);
 } else {
     draw_sprite_ext(sprite_index, image_index, drawX, drawY, image_xscale * xScale, image_yscale * global.grav, image_angle, drawColor, image_alpha);
@@ -986,6 +1102,8 @@ if (global.debugShowHitbox)
 //Draw the player getting hit if god mode is active
 if (hit != 0)
     draw_sprite_ext(sprPlayerHit, 0, hitX, hitY, 1, 1, 0, c_white, hit/floor(global.debugDeathSpeed/2));
+
+//draw_set_blend_mode(0);
 </string>
           </argument>
         </arguments>

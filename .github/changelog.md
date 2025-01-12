@@ -7,11 +7,15 @@
 ## 1.2.02 (2024-12-29)
 
 1. Finish stage 02 **Cherris Forest**
-
 2. change the background of option room
 
 ## 1.2.03 (2025-01-11)
 
 1. feat: add Online Mode
-
 2. bugfix: add DBGHELP.dll to fix frame loss issue
+
+## 1.2.04 (2025-01-12)
+
+1. feat: add colorful players and dot kid
+2. bugfix: fix some bugs
+3. change the README file
