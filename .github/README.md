@@ -36,44 +36,44 @@ try up arrow key and down arrow key to change the color of full colored player a
 
 ## TODO
 
-1. [X] Stage 01: Ederu Street
-2. [X] Stage 02: Cherris Forest
-3. [ ] Stage 03: Convels Ocean
-4. [ ] Stage 04: Convels Frozen
-5. [ ] Stage 05: Defender's Cave
+- [X] Stage 01: Ederu Street
+- [X] Stage 02: Cherris Forest
+- [ ] Stage 03: Convels Ocean
+- [ ] Stage 04: Convels Frozen
+- [ ] Stage 05: Defender's Cave
 
 - [ ] Boss1
 
-6. [ ] Stage 06: Cloud Park
-7. [ ] Stage 07: Cosmic Space
+- [ ] Stage 06: Cloud Park
+- [ ] Stage 07: Cosmic Space
 
 - [ ] Boss2
 
-8. [ ] Stage 08: Mystic Knoll
-9. [ ] Stage 09: Seashore Cave
+- [ ] Stage 08: Mystic Knoll
+- [ ] Stage 09: Seashore Cave
 
 - [ ] Assassin 1
 
-1. [ ] Stage 10: Mechanic Castle
+- [ ] Stage 10: Mechanic Castle
 
 - [ ] Assassin 2
 
-1. [ ] Stage 11: Specticle Space
+- [ ] Stage 11: Specticle Space
 
 - [ ] Assassin 3
 
-1. [ ] Stage 12: Sky Tower
-2. [ ] Stage 13: Black Valley
-3. [ ] Stage 14: Death Tower
+- [ ] Stage 12: Sky Tower
+- [ ] Stage 13: Black Valley
+- [ ] Stage 14: Death Tower
 
 - [ ] Boss3
 
-1. [ ] Stage 15: CQ
-2. [ ] Stage 16: C ans X
-3. [ ] Stage 17: remain0
-4. [ ] Stage 18: Remain Road
-5. [ ] Stage 19: The Closing World
-6. [ ] Stage 20: See The Moon
+- [ ] Stage 15: CQ
+- [ ] Stage 16: C ans X
+- [ ] Stage 17: remain0
+- [ ] Stage 18: Remain Road
+- [ ] Stage 19: The Closing World
+- [ ] Stage 20: See The Moon
 
 - [ ] Boss4 - Final Boss
 - [ ] The End Animation
