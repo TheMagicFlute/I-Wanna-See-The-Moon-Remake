@@ -281,7 +281,7 @@ if (global.debugMode &amp;&amp; global.gameStarted &amp;&amp; !global.gamePaused
             with (objPlayer)
             {
                 scrSaveGame(true);
-                var snd = audio_play_sound(sndPlasma_SaveSound, 0, false);
+                var snd = audio_play_sound(sndItem, 0, false);
                 audio_sound_gain(snd, 0.5, 0);
             }
         }
@@ -327,7 +327,8 @@ if (!global.isUpToDate &amp;&amp; !global.gameStarted)
 {
     if (keyboard_check_pressed(vk_tab))
     {
-        url_open(global.newestVersionLink);
+        //url_open(global.newestVersionLink);//there is something wrong with url_open();
+        execute_shell_simple(global.newestVersionLink);
     }
 }
 </string>
@@ -385,6 +386,34 @@ if (keyboard_check(vk_control) &amp;&amp; keyboard_check_pressed(ord("M")) &amp;
 {
     scrToggleMusic();
     scrSaveConfig();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// force update
+
+if (global.forceUpdate &amp;&amp; !global.isUpToDate)
+{
+    show_message("You should download the latest version of this game to continue");
+    execute_shell_simple("https://delicious-fruit.com/");
+    game_end();
 }
 </string>
           </argument>
@@ -711,6 +740,10 @@ if (Id == global.httpUpdateCheck)
                 updateString = scrFormat("Current version {global.gameVersion} is outdated! {global.newestVersionNumber} is available.#Press Tab to open the download link");
             }
         }
+    }
+    else
+    {
+        global.isUpToDate = false;
     }
 }
 </string>

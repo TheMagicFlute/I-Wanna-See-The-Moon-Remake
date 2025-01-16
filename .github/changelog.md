@@ -24,3 +24,8 @@
 
 1. upload all bgms and Logos
 2. fix something about the dot kid
+
+## 1.2.06 (2025-01-16)
+
+1. feat: force update
+2. add extension: execute_shell_simple_ext

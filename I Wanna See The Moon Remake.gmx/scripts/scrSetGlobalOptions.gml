@@ -8,9 +8,9 @@ global.debugDeathSpeed = 50;    //Sets how many frames after getting hit for god
 
 //Updates
 global.checkForUpdates = true;
-global.forceUpdate = false;     //if it is on and the game is outdated, the game will force quit and open the download page
+global.forceUpdate = true;     //if it is on and the game is outdated, the game will force quit and open the download page
 global.versionDataUrl = "https://raw.githubusercontent.com/TheMagicFlute/I-Wanna-See-The-Moon-Remake/refs/heads/main/IWSTMR-current-version.json";
-global.gameVersion = "1.2.05";
+global.gameVersion = "1.2.06";
 
 //Menu
 global.menuMode = 0;                //Sets whether to use a warp room or a menu for selecting the game's difficulty (0 = warp room, 1 = menu)

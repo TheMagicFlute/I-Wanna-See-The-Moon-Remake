@@ -571,6 +571,7 @@
   <NewExtensions>
     <extension index="0">extensions\GMSched</extension>
     <extension index="1">extensions\Http Dll 2.3</extension>
+    <extension index="2">extensions\execute_shell_simple_ext</extension>
   </NewExtensions>
   <sounds name="sound">
     <sounds name="Sfx">
