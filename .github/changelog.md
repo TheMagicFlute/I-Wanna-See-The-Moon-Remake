@@ -19,3 +19,8 @@
 1. feat: add colorful players and dot kid
 2. bugfix: fix some bugs
 3. change the README file
+
+## 1.2.05 (2025-01-16)
+
+1. upload all bgms and Logos
+2. fix something about the dot kid

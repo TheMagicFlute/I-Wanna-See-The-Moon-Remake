@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="5" name="datafiles">
-    <datafiles number="5" name="Music">
+  <datafiles number="38" name="datafiles">
+    <datafiles number="38" name="Music">
       <datafile>
         <name>musGuyRock.ogg</name>
         <exists>-1</exists>
@@ -73,6 +73,482 @@
         </ConfigOptions>
         <filename>musOnDeath.ogg</filename>
       </datafile>
+      <datafile>
+        <name>musTitle.ogg</name>
+        <exists>-1</exists>
+        <size>294242</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musTitle.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musEderu_street.ogg</name>
+        <exists>-1</exists>
+        <size>1630879</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musEderu_street.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musCherris_Forest.ogg</name>
+        <exists>-1</exists>
+        <size>1002070</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musCherris_Forest.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musConvels_Ocean.ogg</name>
+        <exists>-1</exists>
+        <size>1734856</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musConvels_Ocean.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musConvels_Frozen.ogg</name>
+        <exists>-1</exists>
+        <size>1164123</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musConvels_Frozen.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musDefenders_Cave.ogg</name>
+        <exists>-1</exists>
+        <size>1997367</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musDefenders_Cave.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musBoss1.ogg</name>
+        <exists>-1</exists>
+        <size>1650459</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musBoss1.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musCloud_Park.ogg</name>
+        <exists>-1</exists>
+        <size>1114662</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musCloud_Park.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musCosmic_Space.ogg</name>
+        <exists>-1</exists>
+        <size>1380142</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musCosmic_Space.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musBoss2.ogg</name>
+        <exists>-1</exists>
+        <size>1694848</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musBoss2.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musMystic_Knoll.ogg</name>
+        <exists>-1</exists>
+        <size>996313</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musMystic_Knoll.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musSeashore_Cave.ogg</name>
+        <exists>-1</exists>
+        <size>982530</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musSeashore_Cave.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musAssassin1.ogg</name>
+        <exists>-1</exists>
+        <size>1105587</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musAssassin1.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musMechanic_Castle.ogg</name>
+        <exists>-1</exists>
+        <size>711975</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musMechanic_Castle.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musAssassin2.ogg</name>
+        <exists>-1</exists>
+        <size>831279</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musAssassin2.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musSpectacle_Space.ogg</name>
+        <exists>-1</exists>
+        <size>1436234</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musSpectacle_Space.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musAssassin3.ogg</name>
+        <exists>-1</exists>
+        <size>1708312</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musAssassin3.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musSky_Tower.ogg</name>
+        <exists>-1</exists>
+        <size>2605523</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musSky_Tower.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musBlack_Valley.ogg</name>
+        <exists>-1</exists>
+        <size>1551731</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musBlack_Valley.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musDeath_Tower.ogg</name>
+        <exists>-1</exists>
+        <size>1135030</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musDeath_Tower.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musBoss3.ogg</name>
+        <exists>-1</exists>
+        <size>1373849</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musBoss3.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musCQ.ogg</name>
+        <exists>-1</exists>
+        <size>1423816</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musCQ.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musC_ans_X.ogg</name>
+        <exists>-1</exists>
+        <size>1811717</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musC_ans_X.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musRemains_Road.ogg</name>
+        <exists>-1</exists>
+        <size>2813521</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musRemains_Road.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musThe_Closing_World.ogg</name>
+        <exists>-1</exists>
+        <size>1359559</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musThe_Closing_World.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musBoss4.ogg</name>
+        <exists>-1</exists>
+        <size>1874262</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musBoss4.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musBoss5.ogg</name>
+        <exists>-1</exists>
+        <size>1897088</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musBoss5.ogg</filename>
+      </datafile>
+      <datafile>
+        <name>musEnding.ogg</name>
+        <exists>-1</exists>
+        <size>1948844</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>musEnding.ogg</filename>
+      </datafile>
     </datafiles>
     <datafile>
       <name>DBGHELP.dll</name>
@@ -136,12 +612,6 @@
       <sound>sound\sndUnmaster</sound>
       <sound>sound\sndCouch</sound>
       <sound>sound\sndTelekid</sound>
-    </sounds>
-    <sounds name="IWSTMR">
-      <sound>sound\musTitle</sound>
-      <sound>sound\musEderu</sound>
-      <sound>sound\musForest</sound>
-      <sound>sound\musOcean</sound>
     </sounds>
     <sounds name="cn3">
       <sound>sound\sndPlasma_SaveBlockerSound</sound>
@@ -492,9 +962,26 @@
         <sprite>sprites\sprDoorToSpecticalSpace</sprite>
       </sprites>
       <sprites name="logos">
-        <sprite>sprites\sprLogoEderu</sprite>
-        <sprite>sprites\sprLogoForest</sprite>
-        <sprite>sprites\sprLogoOcean</sprite>
+        <sprite>sprites\sprLogoUnknown</sprite>
+        <sprite>sprites\sprLogoEderu_Street</sprite>
+        <sprite>sprites\sprLogoCherris_Forest</sprite>
+        <sprite>sprites\sprLogoConvels_Ocean</sprite>
+        <sprite>sprites\sprLogoConvels_Frozen</sprite>
+        <sprite>sprites\sprLogoDefenders_Cave</sprite>
+        <sprite>sprites\sprLogoCloud_Park</sprite>
+        <sprite>sprites\sprLogoCosmic_Space</sprite>
+        <sprite>sprites\sprLogoMystic_Knoll</sprite>
+        <sprite>sprites\sprLogoSeashore_Cave</sprite>
+        <sprite>sprites\sprLogoMechanic_Castle</sprite>
+        <sprite>sprites\sprLogoSpectacle_Space</sprite>
+        <sprite>sprites\sprLogoSky_Tower</sprite>
+        <sprite>sprites\sprLogoBlack_Valley</sprite>
+        <sprite>sprites\sprLogoDeath_Tower</sprite>
+        <sprite>sprites\sprLogoCQ</sprite>
+        <sprite>sprites\sprLogoC_ans_X</sprite>
+        <sprite>sprites\sprLogoRemains_Road</sprite>
+        <sprite>sprites\sprLogoThe_Closing_World</sprite>
+        <sprite>sprites\sprLogoSee_The_Moon</sprite>
       </sprites>
       <sprite>sprites\sprCloud</sprite>
       <sprite>sprites\sprTree</sprite>
@@ -1027,9 +1514,26 @@
       </objects>
       <objects name="logos">
         <object>objects\objLogo</object>
-        <object>objects\objLogoEderu</object>
-        <object>objects\objLogoForest</object>
-        <object>objects\objLogoOcean</object>
+        <object>objects\objLogoUnknown</object>
+        <object>objects\objLogoEderu_Street</object>
+        <object>objects\objLogoCherris_Forest</object>
+        <object>objects\objLogoConvels_Ocean</object>
+        <object>objects\objLogoConvels_Frozen</object>
+        <object>objects\objLogoDefenders_Cave</object>
+        <object>objects\objLogoCloud_Park</object>
+        <object>objects\objLogoCosmic_Space</object>
+        <object>objects\objLogoMystic_Knoll</object>
+        <object>objects\objLogoSeashore_Cave</object>
+        <object>objects\objLogoMechanic_Castle</object>
+        <object>objects\objLogoSpectacle_Space</object>
+        <object>objects\objLogoSky_Tower</object>
+        <object>objects\objLogoBlack_Valley</object>
+        <object>objects\objLogoDeath_Tower</object>
+        <object>objects\objLogoCQ</object>
+        <object>objects\objLogoC_ans_X</object>
+        <object>objects\objLogoRemains_Road</object>
+        <object>objects\objLogoThe_Closing_World</object>
+        <object>objects\objLogoSee_The_Moon</object>
       </objects>
       <objects name="diff">
         <object>objects\objDiffKiller</object>
@@ -1144,11 +1648,6 @@
       <room>rooms\rDiffSelect</room>
       <room>rooms\rPre</room>
     </rooms>
-    <rooms name="IWSTMR">
-      <room>rooms\rEderu</room>
-      <room>rooms\rForest</room>
-      <room>rooms\rOcean</room>
-    </rooms>
     <rooms name="Sample">
       <room>rooms\rTestHub</room>
       <room>rooms\rSample</room>
@@ -1181,6 +1680,11 @@
         <room>rooms\rTest21</room>
         <room>rooms\room34</room>
       </rooms>
+    </rooms>
+    <rooms name="IWSTMR">
+      <room>rooms\rEderu_Street</room>
+      <room>rooms\rCherris_Forest</room>
+      <room>rooms\rConvels_Ocean</room>
     </rooms>
     <room>rooms\rTemplate</room>
   </rooms>

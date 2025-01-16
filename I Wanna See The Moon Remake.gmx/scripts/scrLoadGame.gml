@@ -31,7 +31,6 @@ if (loadFile)
     global.difficulty = global.saveMap[? "difficulty"];
 }
 
-
 with(objPlayer)
     { instance_destroy(); }
 

@@ -8,8 +8,9 @@ global.debugDeathSpeed = 50;    //Sets how many frames after getting hit for god
 
 //Updates
 global.checkForUpdates = true;
-global.versionDataUrl = "https://raw.githubusercontent.com/TheMagicFlute/sI-Wanna-See-The-Moon-Remake/refs/heads/main/IWSTMR-current-version.json";
-global.gameVersion = "1.2.04";
+global.forceUpdate = false;     //if it is on and the game is outdated, the game will force quit and open the download page
+global.versionDataUrl = "https://raw.githubusercontent.com/TheMagicFlute/I-Wanna-See-The-Moon-Remake/refs/heads/main/IWSTMR-current-version.json";
+global.gameVersion = "1.2.05";
 
 //Menu
 global.menuMode = 0;                //Sets whether to use a warp room or a menu for selecting the game's difficulty (0 = warp room, 1 = menu)
@@ -32,6 +33,7 @@ global.edgeDeath = true;            //Sets whether to kill the player when he le
 global.directionalTapFix = false;   //Sets whether to change the behavior of tapping left/right for less than 1 frame (by default the player does not move when this happens, enabling this always moves the player for 1 frame when left/right is tapped)
 global.strictSaveBlockers = true;   //Bullets check for saveblocker collision when created instead of only after a frame of movement
 global.fixBulletHeight = true;      //Spawns bullets 3px higher, accurate to where the gun is.
+global.dieInBlock = false;          //Sets whether to kill the player when he is in a block
 
 //Items
 global.secretItemTotal = 0;         //Sets how many secret items for the game to save/load

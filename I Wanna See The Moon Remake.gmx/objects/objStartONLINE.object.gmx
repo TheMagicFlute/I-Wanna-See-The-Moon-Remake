@@ -38,7 +38,8 @@ if (string_length(objWorld.__ONLINE_password) &gt; 20)
 objWorld.__ONLINE_selfGameID += objWorld.__ONLINE_password;
 objWorld.__ONLINE_team = get_string("Which team do you want to be in? (1~9)", "1");
 objWorld.__ONLINE_name = "team" + objWorld.__ONLINE_team + "@" + objWorld.__ONLINE_name;
-objWorld.__ONLINE_server = get_string("Which server do you want to connect to", "iwannastartaparty.com");    
+//objWorld.__ONLINE_server = get_string("Which server do you want to connect to", "iwannastartaparty.com");   
+objWorld.__ONLINE_server = "iwannastartaparty.com"; 
 
 switch (objWorld.__ONLINE_team)
 {

@@ -4,8 +4,8 @@
 scrSetGlobalOptions();
 
 global.debugOverlay = true;    //Enables showing the debug text overlay (shows player location, align, etc.)
-global.debugNoDeath = false;    //Enables god mode (toggle with Home key)
-global.debugInfJump = false;    //Enables infinite jump (toggle with End key)
+global.debugNoDeath = true;    //Enables god mode (toggle with Home key)
+global.debugInfJump = true;    //Enables infinite jump (toggle with End key)
 global.debugShowHitbox = false; //Enables showing the player's hitbox (toggle with Del key)
 
 global.roomCaptionLast = global.roomCaptionDef;
@@ -46,6 +46,7 @@ global.assassins2 = false;
 global.assassins3 = false;
 global.boss3 = false;
 global.boss4 = false;
+global.boss5 = false;
 
 // ONLINE
 global.showONLINEinfo = false; // Set to true to show online info in screen

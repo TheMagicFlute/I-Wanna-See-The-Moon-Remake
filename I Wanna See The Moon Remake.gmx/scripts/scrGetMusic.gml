@@ -9,17 +9,17 @@ switch (room)                       //Determines which song to play
     case rMenu:
     case rOptions:
     case rDifficultySelect:
-        roomSong = musTitle;
+        roomSong = global.musTitle;
         break;
     
-    case rEderu:
-        roomSong = musEderu;
+    case rEderu_Street:
+        roomSong = global.musEderu_street;
         break;
-    case rForest:
-        roomSong = musForest;
+    case rCherris_Forest:
+        roomSong = global.musCherris_Forest;
         break;
-    case rOcean:
-        roomSong = musOcean;
+    case rConvels_Ocean:
+        roomSong = global.musConvels_Ocean;
         break;
 
 

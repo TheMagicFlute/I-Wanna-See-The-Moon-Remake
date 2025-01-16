@@ -2,7 +2,7 @@
 <room>
   <caption></caption>
   <width>8000</width>
-  <height>2080</height>
+  <height>1824</height>
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
@@ -75,7 +75,7 @@
     <instance objName="objBlock" x="1504" y="1344" name="inst_AE61938A" locked="0" code="" scaleX="7" scaleY="9" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="1856" y="1600" name="inst_582B4C0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlayerStart" x="64" y="1760" name="inst_5AE2FF9C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objLogoEderu" x="1713" y="1248" name="inst_A21E7BFE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLogoEderu_Street" x="1713" y="1248" name="inst_A21E7BFE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlatformInvisible" x="224" y="1488" name="inst_359FA650" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlatformInvisible" x="320" y="1360" name="inst_6F044EC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlatform" x="832" y="1440" name="inst_12324AE1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -86,8 +86,8 @@
     <instance objName="objPlatform" x="1440" y="1600" name="inst_E5E2CAD9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objCloud" x="208" y="1472" name="inst_8EC45EF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objCloud" x="304" y="1344" name="inst_E38E2CD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objLogoEderu" x="112" y="1248" name="inst_32586DDE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objLogoEderu" x="912" y="1248" name="inst_1A303FC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLogoEderu_Street" x="112" y="1248" name="inst_32586DDE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLogoEderu_Street" x="912" y="1248" name="inst_1A303FC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlatform" x="64" y="1816" name="inst_DEB9750F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlatform" x="96" y="1816" name="inst_102D016D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSaveVHard" x="90" y="1696" name="inst_DCC53440" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -182,8 +182,8 @@
     <instance objName="objDiffSpikeUp" x="3104" y="1408" name="inst_2B640DE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDiffSpikeUp" x="3168" y="1408" name="inst_F8C9C255" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDiffSpikeUp" x="3136" y="1408" name="inst_C7C90CD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objLogoEderu" x="2512" y="1248" name="inst_BBC4B0B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objLogoEderu" x="3312" y="1248" name="inst_B68263FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLogoEderu_Street" x="2512" y="1248" name="inst_BBC4B0B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLogoEderu_Street" x="3312" y="1248" name="inst_B68263FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlatformInvisible" x="2736" y="1392" name="inst_E455B8E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objCloud" x="2720" y="1376" name="inst_0E5527FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objTrgCloud" x="3016" y="1376" name="inst_9463FF8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -241,7 +241,7 @@
     <instance objName="objBlock" x="4384" y="1312" name="inst_EE4837B0" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="4512" y="1312" name="inst_C5C6F570" locked="0" code="" scaleX="5" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objSave" x="4112" y="1584" name="inst_CED73BAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objLogoEderu" x="4112" y="1248" name="inst_0B6F081F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLogoEderu_Street" x="4112" y="1248" name="inst_0B6F081F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="4576" y="1632" name="inst_73C7D3EF" locked="0" code="" scaleX="9" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objBadBlock" x="4576" y="1376" name="inst_9D363B7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBadBlock" x="4576" y="1408" name="inst_3D6E14D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -321,8 +321,6 @@
     <instance objName="objTrigger" x="1297" y="1216" name="inst_B885DEF9" locked="0" code="trg = 4;&#xA;destroy = 1;&#xA;" scaleX="0.5" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objTrigger" x="992" y="1688" name="inst_2FEF4B0B" locked="0" code="trg = 3;&#xA;destroy = 1;&#xA;" scaleX="3" scaleY="0.25" colour="4294967295" rotation="0"/>
     <instance objName="objTrigger" x="352" y="1504" name="inst_104E7322" locked="0" code="trg = 0;&#xA;destroy = 1;&#xA;" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
-    <instance objName="objKillerBlock" x="4192" y="1824" name="inst_6912C85A" locked="0" code="" scaleX="20" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objKillerBlock" x="5216" y="1824" name="inst_55901580" locked="0" code="" scaleX="9" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlatformInvisible" x="1776" y="1360" name="inst_EE01A4FC" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlatformInvisible" x="1936" y="1328" name="inst_B117B468" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objCloud" x="1760" y="1344" name="inst_C0A8639B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -368,7 +366,7 @@
     <instance objName="objCloud" x="2368" y="608" name="inst_7AB46F19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objCloud" x="1792" y="672" name="inst_DC6F02DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objCloud" x="1728" y="608" name="inst_198981C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objLogoEderu" x="1712" y="640" name="inst_16FA21ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLogoEderu_Street" x="1712" y="640" name="inst_16FA21ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlatformInvisible" x="2096" y="1296" name="inst_67DF0C38" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlatformInvisible" x="2128" y="1168" name="inst_5122D96E" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlatformInvisible" x="2032" y="1072" name="inst_5046670E" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
@@ -395,8 +393,6 @@
     <instance objName="objVineL" x="5792" y="1408" name="inst_2CAB316B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objVineL" x="5792" y="1440" name="inst_12024BBF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objVineL" x="5792" y="1472" name="inst_A0AB6C85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objKillerBlock" x="5792" y="1824" name="inst_CACDA06D" locked="0" code="" scaleX="19" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objKillerBlock" x="6560" y="1824" name="inst_AF9853AF" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="5920" y="1632" name="inst_43484D1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="6080" y="1632" name="inst_1E8F556F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="6208" y="1504" name="inst_ADDF9A58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -463,11 +459,11 @@
     <instance objName="objBlock" x="7968" y="1056" name="inst_DF0934E7" locked="0" code="" scaleX="1" scaleY="21" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="7936" y="1600" name="inst_0E23224C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="7872" y="1504" name="inst_594B7683" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objLogoEderu" x="4912" y="1248" name="inst_D21D9E41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objLogoEderu" x="5712" y="1248" name="inst_17232EF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objLogoEderu" x="6512" y="1248" name="inst_898C8121" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objLogoEderu" x="7312" y="1248" name="inst_29A792DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objLogoEderu" x="7312" y="640" name="inst_9C4DB2AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLogoEderu_Street" x="4912" y="1248" name="inst_D21D9E41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLogoEderu_Street" x="5712" y="1248" name="inst_17232EF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLogoEderu_Street" x="6512" y="1248" name="inst_898C8121" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLogoEderu_Street" x="7312" y="1248" name="inst_29A792DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLogoEderu_Street" x="7312" y="640" name="inst_9C4DB2AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDiffSpikeUp" x="7072" y="1344" name="inst_901A2B19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDiffSpikeUp" x="7104" y="1344" name="inst_3FBA09BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDiffSpikeUp" x="7840" y="1696" name="inst_7B412391" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -503,9 +499,7 @@
     <instance objName="objBlock" x="7936" y="1056" name="inst_AA11DF4C" locked="0" code="" scaleX="1" scaleY="10" colour="4294967295" rotation="0"/>
     <instance objName="objSave" x="7280" y="1632" name="inst_BA38CF62" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSaveMedium" x="7440" y="1056" name="inst_EFABBD95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objKillerBlock" x="7360" y="1824" name="inst_C849CD05" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objKillerBlock" x="7552" y="1824" name="inst_05943200" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objOutsideRoomChanger" x="7968" y="736" name="inst_186CA647" locked="0" code="roomTo = rForest;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="7968" y="736" name="inst_186CA647" locked="0" code="roomTo = rCherris_Forest;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objSaveVHard" x="5648" y="1584" name="inst_3900BA68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objCamera" x="1824" y="1600" name="inst_ACA54BEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objButtonR" x="5056" y="1504" name="inst_8B69543E" locked="0" code="trg = 9;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -546,9 +540,10 @@
     <instance objName="objBadBlock" x="7776" y="1696" name="inst_D91BCC6E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objCherryPth1" x="7328" y="1024" name="inst_2F713A70" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSaveVHard" x="1792" y="1600" name="inst_99B15719" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objRoomChanger" x="3192" y="1632" name="inst_B22E01CA" locked="0" code="roomTo = rOcean;&#xA;warpX = 832;&#xA;warpY = 448;&#xA;" scaleX="0.25" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="objRoomChanger" x="3192" y="1632" name="inst_B22E01CA" locked="0" code="roomTo = rConvels_Ocean;&#xA;warpX = 832;&#xA;warpY = 448;&#xA;" scaleX="0.25" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objDoorBoss1" x="1664" y="1632" name="inst_C0A2F358" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDoorBoss2" x="3072" y="1632" name="inst_231C5BE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="-32" y="608" name="inst_DE10B03B" locked="0" code="" scaleX="1" scaleY="38" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bAllTiles" x="0" y="1760" w="32" h="32" xo="0" yo="0" id="10003616" name="inst_34E4AB21" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

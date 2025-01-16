@@ -73,7 +73,10 @@ try up arrow key and down arrow key to change the color of full colored player a
 - [ ] Stage 17: remain0
 - [ ] Stage 18: Remain Road
 - [ ] Stage 19: The Closing World
+
+- [ ] Boss4
+
 - [ ] Stage 20: See The Moon
 
-- [ ] Boss4 - Final Boss
+- [ ] Boss5 - Final Boss
 - [ ] The End Animation

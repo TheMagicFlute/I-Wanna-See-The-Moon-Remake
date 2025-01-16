@@ -77,6 +77,7 @@ switch(argument0)
         sprJump  = sprPlayerJumpOutline;
         sprSlide = sprPlayerSlideOutline;
         sprClimb = sprPlayerClimbOutline;
-        break
+        break;
+    default:
         break;
 }

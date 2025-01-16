@@ -998,7 +998,7 @@ else if (global.debugOverlay)
 
         }
         scrDrawTextOutline(xOff,200,"Diff: "+string(drawDiff),c_white,c_black);
-        scrDrawTextOutline(xOff,240,"DK: "+string(drawDK)+"Color: "+string(drawPlayerColor),c_white,c_black);
+        scrDrawTextOutline(xOff,240,"DK: "+string(drawDK)+" Color: "+string(drawPlayerColor),c_white,c_black);
     }
 }
 </string>

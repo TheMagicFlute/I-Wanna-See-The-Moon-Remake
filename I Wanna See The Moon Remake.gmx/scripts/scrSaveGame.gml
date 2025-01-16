@@ -16,7 +16,7 @@ if (savePosition)
     // } else {
     //     global.saveMap[? "playerY"] = objPlayer.y;
     // }
-    global.saveMap[? "playerY"] = objPlayer.y;
+    // global.saveMap[? "playerY"] = objPlayer.y;
     global.saveMap[? "playerXScale"] = objPlayer.xScale;
     global.saveMap[? "grav"] = global.grav;
     
