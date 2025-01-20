@@ -29,3 +29,7 @@
 
 1. feat: force update
 2. add extension: execute_shell_simple_ext
+
+## 1.2.07 (2025-01-21)
+
+1. Finish stage 03 **Convels Ocean**

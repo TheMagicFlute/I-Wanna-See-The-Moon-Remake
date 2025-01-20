@@ -34,11 +34,23 @@ else if instance_exists(objKeypickControl) && objKeypickControl.keyCount[K.MASTE
 }
 else if (instance_number(objBullet) < 4)
 {
-    if global.dotkid {
-        instance_create(x, y - 2 * global.grav, objBullet);
+    if (room == rConvels_Frozen && global.fireBullet)
+    {
+        if global.dotkid {
+            instance_create(x, y - 2 * global.grav, objFireBullet);
+        }
+        else {
+            instance_create(x, y - 3 * global.fixBulletHeight, objFireBullet);
+        }
     }
-    else {
-        instance_create(x, y - 3 * global.fixBulletHeight, objBullet);
+    else
+    {
+        if global.dotkid {
+            instance_create(x, y - 2 * global.grav, objBullet);
+        }
+        else {
+            instance_create(x, y - 3 * global.fixBulletHeight, objBullet);
+        }
     }
     audio_play_sound(sndShoot, 0, false);
 }

@@ -1,11 +1,11 @@
-///scrStartNewGame(difficulty)
+///scrStartNewGame()
 
-var difficulty = argument0;
+//var difficulty = argument0;
 
 global.gameStarted = true; //enables saving, restarting, etc.
 global.autosave = true;
 
-global.difficulty = difficulty;
+//global.difficulty = difficulty;
 
 if (file_exists("Data\save" + string(global.savenum)))
 {

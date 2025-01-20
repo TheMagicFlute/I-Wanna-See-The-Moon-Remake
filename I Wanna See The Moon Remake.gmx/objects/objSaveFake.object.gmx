@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = sprSave;
+            <string>if (global.cn3Theme)
+   sprite_index = sprPlasma_Save;
+else
+    sprite_index = sprSave;
 image_speed = 0;
 </string>
           </argument>

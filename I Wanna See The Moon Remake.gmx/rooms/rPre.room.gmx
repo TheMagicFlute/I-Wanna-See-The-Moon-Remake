@@ -15,20 +15,20 @@
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
-    <isSet>0</isSet>
-    <w>10616993</w>
-    <h>10748067</h>
-    <showGrid>0</showGrid>
-    <showObjects>0</showObjects>
-    <showTiles>0</showTiles>
-    <showBackgrounds>0</showBackgrounds>
-    <showForegrounds>0</showForegrounds>
+    <isSet>-1</isSet>
+    <w>1008</w>
+    <h>600</h>
+    <showGrid>-1</showGrid>
+    <showObjects>-1</showObjects>
+    <showTiles>-1</showTiles>
+    <showBackgrounds>-1</showBackgrounds>
+    <showForegrounds>-1</showForegrounds>
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
-    <deleteUnderlyingTiles>0</deleteUnderlyingTiles>
-    <page>11731122</page>
-    <xoffset>10879141</xoffset>
-    <yoffset>11010215</yoffset>
+    <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
+    <page>0</page>
+    <xoffset>-115</xoffset>
+    <yoffset>-89</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -56,9 +56,8 @@
     <instance objName="objBlock" x="704" y="64" name="inst_71181A30" locked="0" code="" scaleX="1" scaleY="15" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="64" y="64" name="inst_4B037299" locked="0" code="" scaleX="21" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="64" y="512" name="inst_7F3CBEBD" locked="0" code="" scaleX="21" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objWarp" x="608" y="320" name="inst_B12F220C" locked="0" code="roomTo = rEderu;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSign" x="384" y="480" name="inst_17CE7E93" locked="0" code="text = &quot;press up WILL NOT show the message because the encoding mode is wrong in the origin work&quot;;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objPlasma_fancyWarp" x="608" y="448" name="inst_0985C9FB" locked="0" code="roomTo = rEderu;&#xA;image_blend = make_color_rgb(60, 60, 60);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPlasma_fancyWarp" x="608" y="448" name="inst_0985C9FB" locked="0" code="roomTo = rEderu_Street;&#xA;image_blend = make_color_rgb(60, 60, 60);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bAllTiles" x="0" y="0" w="32" h="32" xo="32" yo="32" id="10003175" name="inst_080071AC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

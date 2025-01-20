@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>swicherID = -1;
-
+disabled = false;
 </string>
           </argument>
         </arguments>
@@ -49,18 +49,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (switcherID == 0)
+            <string>if (!disabled)
 {
-    if (global.water[? 0] == 0)
-    {
-        image_index=0;
-        image_speed=0;
-    }
-    else
-    {
-        image_index=1;
-        image_speed=0;
-    }
+    image_index=0;
+    image_speed=0;
+}
+else
+{
+    image_index=1;
+    image_speed=0;
 }
 </string>
           </argument>
@@ -90,8 +87,81 @@
     {
         global.water[? 0] = 1;
         audio_play_sound(sndBlockChange, 0, false);
+        disabled = true;
     }
 }
+
+
+if (switcherID == 1)
+{
+    if (global.water[? 1] == 0)
+    {
+        global.water[? 1] = 1;
+        audio_play_sound(sndBlockChange, 0, false);
+        disabled = true;
+    }
+}
+if (switcherID == 2)
+{
+    if (global.water[? 1] == 2)
+    {
+        global.water[? 1] = 3;
+        disabled = true;
+    }
+}
+
+
+
+if (switcherID == 3)
+{
+    if (global.water[? 2] == 0)
+    {
+        global.water[? 2] = 1;
+        audio_play_sound(sndBlockChange, 0, false);
+    }
+    
+    if (global.water[? 2] == 4)
+    {
+        global.water[? 2] = 5;
+        audio_play_sound(sndBlockChange, 0, false);
+    }
+    
+    if (global.water[? 2] == 6)
+    {
+        disabled = true;
+    }
+    
+}
+if (switcherID == 4)
+{
+    if (global.water[? 2] == 2)
+    {
+        global.water[? 2] = 3;
+        audio_play_sound(sndBlockChange, 0, false);
+    }
+    
+    if (global.water[? 2] == 6)
+    {
+        disabled = true;
+    }
+}
+if (switcherID == 5)
+{
+    if (global.water[? 2] == 2)
+    {
+        global.water[? 2] = 6;
+        audio_play_sound(sndBlockChange, 0, false);
+    }
+}
+if (switcherID == 6)
+{
+    if (global.water[? 2] == 7)
+    {
+        global.water[? 2] = 8;
+        audio_play_sound(sndBlockChange, 0, false);
+    }
+}
+//show_debug_message("state: "+string(global.water[? 2]));
 </string>
           </argument>
         </arguments>
@@ -114,7 +184,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>for (var i = 0; i &lt;= 10; i += 1)
+            <string>for (var i = 0; i &lt;= 6; i++)
 {
     global.water[? i] = 0;
 }

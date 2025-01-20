@@ -31,32 +31,6 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>101</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>000001000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>3</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -76,7 +50,7 @@
             <kind>1</kind>
             <string>if (global.trigger[? 4] == true)
 {
-    alarm[0] = 1;
+    hspeed = 3;
     audio_play_sound(sndCherry, 1, false);
     global.trigger[? 4] = false;
 }
@@ -85,7 +59,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="objTrgApple">
+    <event eventtype="4" ename="objTrigger">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -102,11 +76,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x, y - 32, objCherryTrap1);
-instance_create(x, y, objCherryTrap1);
-instance_create(x, y + 32, objCherryTrap1);
-instance_destroy();
-instance_destroy(other);
+            <string>if (other.trg == "cherry_split")
+{
+    instance_create(x, y - 32, objCherryTrap1);
+    instance_create(x, y, objCherryTrap1);
+    instance_create(x, y + 32, objCherryTrap1);
+    instance_destroy();
+    instance_destroy(other);
+}
 </string>
           </argument>
         </arguments>

@@ -63,7 +63,9 @@ difName = "Load Game";
 }
 else    //start new game
 {
-    scrStartNewGame(dif);  
+    //scrStartNewGame(dif);
+    global.difficulty = dif;
+    room_goto(rDiffSelect);
     
     with (objPlayer)
     {

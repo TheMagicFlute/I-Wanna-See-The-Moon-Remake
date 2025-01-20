@@ -957,12 +957,13 @@
     </sprites>
     <sprites name="IWSTMR">
       <sprite>sprites\sprPlayerBack</sprite>
+      <sprite>sprites\sprFireBullet</sprite>
       <sprites name="Doors">
         <sprite>sprites\sprDoorBoss1</sprite>
         <sprite>sprites\sprDoorBoss2</sprite>
         <sprite>sprites\sprDoorToSpecticalSpace</sprite>
       </sprites>
-      <sprites name="logos">
+      <sprites name="Logos">
         <sprite>sprites\sprLogoUnknown</sprite>
         <sprite>sprites\sprLogoEderu_Street</sprite>
         <sprite>sprites\sprLogoCherris_Forest</sprite>
@@ -984,6 +985,22 @@
         <sprite>sprites\sprLogoThe_Closing_World</sprite>
         <sprite>sprites\sprLogoSee_The_Moon</sprite>
       </sprites>
+      <sprites name="Cherries">
+        <sprite>sprites\sprCherryOrange</sprite>
+        <sprite>sprites\sprCherryYellow</sprite>
+        <sprite>sprites\sprCherryGreen</sprite>
+        <sprite>sprites\sprCherryAzure</sprite>
+        <sprite>sprites\sprCherryBlue</sprite>
+        <sprite>sprites\sprCherryViolet</sprite>
+      </sprites>
+      <sprites name="Spikes">
+        <sprite>sprites\sprSpikeYellowUp</sprite>
+        <sprite>sprites\sprSpikeYellowDown</sprite>
+        <sprite>sprites\sprDiffSpikeUp</sprite>
+        <sprite>sprites\sprDiffSpikeDown</sprite>
+        <sprite>sprites\sprDiffSpikeLeft</sprite>
+        <sprite>sprites\sprDiffSpikeRight</sprite>
+      </sprites>
       <sprite>sprites\sprCloud</sprite>
       <sprite>sprites\sprTree</sprite>
       <sprite>sprites\sprTreeHead</sprite>
@@ -998,22 +1015,18 @@
       <sprite>sprites\sprObama03</sprite>
       <sprite>sprites\sprButtonR0</sprite>
       <sprite>sprites\sprButtonL0</sprite>
-      <sprite>sprites\sprCherryOrange</sprite>
-      <sprite>sprites\sprCherryYellow</sprite>
-      <sprite>sprites\sprCherryGreen</sprite>
-      <sprite>sprites\sprCherryAzure</sprite>
-      <sprite>sprites\sprCherryBlue</sprite>
       <sprite>sprites\sprForstMask0</sprite>
       <sprite>sprites\sprForestDoor</sprite>
       <sprite>sprites\sprFloorForest0</sprite>
       <sprite>sprites\sprFloorForest1</sprite>
       <sprite>sprites\sprM9</sprite>
-      <sprite>sprites\sprSpikeYellowUp</sprite>
-      <sprite>sprites\sprSpikeYellowDown</sprite>
       <sprite>sprites\sprWaterSwitcher</sprite>
       <sprite>sprites\sprWarpBlue</sprite>
       <sprite>sprites\sprWarpGreen</sprite>
       <sprite>sprites\sprOceanWater</sprite>
+      <sprite>sprites\sprWaterBlock</sprite>
+      <sprite>sprites\sprOceanMonster</sprite>
+      <sprite>sprites\sprIce</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -1031,6 +1044,7 @@
         <background>background\bgEderu</background>
         <background>background\bgForest</background>
         <background>background\bgOcean</background>
+        <background>background\bgFrozen</background>
       </backgrounds>
       <backgrounds name="tiles">
         <background>background\bgDarkBlue</background>
@@ -1038,6 +1052,7 @@
         <background>background\bgWall</background>
         <background>background\bgDark</background>
         <background>background\bgDarkBackground</background>
+        <background>background\bgAqua</background>
       </backgrounds>
       <background>background\bgWIWST</background>
       <background>background\bgWMoon</background>
@@ -1066,7 +1081,18 @@
       <path>paths\pthForestCherry2</path>
       <path>paths\pthForestCherryYellow</path>
       <path>paths\pthForestCherry3</path>
+      <path>paths\pthOceanTrap0</path>
+      <path>paths\pthOceanTrap1</path>
+    </paths>
+    <paths name="Basic">
+      <path>paths\pthUp3x32</path>
       <path>paths\pthUp5x32</path>
+      <path>paths\pthUp6x32</path>
+      <path>paths\pthUp17x32</path>
+      <path>paths\pthDown3x32</path>
+      <path>paths\pthDown4x32</path>
+      <path>paths\pthDown6x32</path>
+      <path>paths\pthDown11x32</path>
     </paths>
   </paths>
   <scripts name="scripts">
@@ -1164,6 +1190,9 @@
     </scripts>
     <script>scripts\scrPlasma_lineCreate.gml</script>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\sdrTest.shader</shader>
+  </shaders>
   <fonts name="fonts">
     <font>fonts\fDefault30</font>
     <font>fonts\fDefault24</font>
@@ -1538,19 +1567,15 @@
       </objects>
       <objects name="diff">
         <object>objects\objDiffKiller</object>
+        <object>objects\objDiffSpikeUp</object>
         <object>objects\objDiffSpikeDown</object>
         <object>objects\objDiffSpikeLeft</object>
         <object>objects\objDiffSpikeRight</object>
-        <object>objects\objDiffSpikeUp</object>
         <object>objects\objDiffBlock</object>
       </objects>
       <objects name="Ederu">
         <object>objects\objCloud</object>
-        <object>objects\objTrgTree</object>
-        <object>objects\objTrgTree2</object>
-        <object>objects\objTrgApple</object>
-        <object>objects\objTrgCloud</object>
-        <object>objects\objTrgCherry</object>
+        <object>objects\objEderuTree0Manager</object>
         <object>objects\objFloor0</object>
         <object>objects\objTree0</object>
         <object>objects\objTreeHead0</object>
@@ -1564,11 +1589,11 @@
         <object>objects\objCloudTrap0</object>
         <object>objects\objMapViewer</object>
         <object>objects\objMap</object>
-        <object>objects\objMonster0</object>
+        <object>objects\objEderuMonster0</object>
         <object>objects\objUpBlock</object>
         <object>objects\objObama03</object>
-        <object>objects\objMonster1</object>
-        <object>objects\objMonster2</object>
+        <object>objects\objEderuMonster1</object>
+        <object>objects\objEderuMonster2</object>
         <object>objects\objTrapFloor00</object>
         <object>objects\objTrapFloor01</object>
         <object>objects\objTrapButton0</object>
@@ -1613,18 +1638,26 @@
         <object>objects\objForestCherryLast1</object>
       </objects>
       <objects name="Ocean">
-        <object>objects\objTrgOcean0</object>
         <object>objects\objWarpToOcean</object>
         <object>objects\objWarpToEderu</object>
         <object>objects\objWaterSwicher</object>
         <object>objects\objOceanWater</object>
         <object>objects\objOceanTrapCherry0</object>
         <object>objects\objOceanTrapCherry1</object>
+        <object>objects\objOceanMonster0</object>
+        <object>objects\objOceanPlatformLast</object>
+        <object>objects\objOceanDiffSpikeDownWithPlatform</object>
+        <object>objects\objOceanTrapBlock0</object>
+        <object>objects\objOceanTrapBlock1</object>
+        <object>objects\objOceanMonster1</object>
       </objects>
-      <object>objects\objTrgParent</object>
+      <objects name="Frozen">
+        <object>objects\objIce</object>
+      </objects>
+      <object>objects\objFireBullet</object>
+      <object>objects\objDiffWarp</object>
       <object>objects\objPlayerBack</object>
       <object>objects\objBoard</object>
-      <object>objects\objDiffWarp</object>
       <object>objects\objBadBlock</object>
       <object>objects\objBrokenBlock</object>
       <object>objects\objButtonR</object>
@@ -1637,7 +1670,10 @@
       <object>objects\objInvisM9</object>
       <object>objects\objSpikeYellowUp</object>
       <object>objects\objSpikeYellowDown</object>
+      <object>objects\objWaterBlock</object>
+      <object>objects\objCherryShootToPlayer</object>
     </objects>
+    <object>objects\objSdrTest</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Init">
@@ -1686,6 +1722,7 @@
       <room>rooms\rEderu_Street</room>
       <room>rooms\rCherris_Forest</room>
       <room>rooms\rConvels_Ocean</room>
+      <room>rooms\rConvels_Frozen</room>
     </rooms>
     <room>rooms\rTemplate</room>
   </rooms>

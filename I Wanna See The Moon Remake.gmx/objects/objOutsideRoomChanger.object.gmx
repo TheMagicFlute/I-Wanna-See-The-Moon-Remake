@@ -56,19 +56,22 @@ dkFlag = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (   objPlayer.x &lt; bbox_left
-    &amp;&amp; objPlayer.x &gt; bbox_right
-    &amp;&amp; objPlayer.y &lt; bbox_top
-    &amp;&amp; objPlayer.y &gt; bbox_bottom)
+            <string>if (instance_exists(objPlayer))
 {
-    dkFlag = false;
-}
-
-if (!scrInRange(other.x, 3, room_width - 3) || !scrInRange(other.y, 3, room_height - 3))
-{
-    if (dkFlag)
+    if (   objPlayer.x &lt; bbox_left
+        &amp;&amp; objPlayer.x &gt; bbox_right
+        &amp;&amp; objPlayer.y &lt; bbox_top
+        &amp;&amp; objPlayer.y &gt; bbox_bottom)
     {
-        event_user(0);
+        dkFlag = false;
+    }
+    
+    if (!scrInRange(objPlayer.x, 3, room_width - 3) || !scrInRange(objPlayer.y, 3, room_height - 3))
+    {
+        if (dkFlag)
+        {
+            event_user(0);
+        }
     }
 }
 </string>

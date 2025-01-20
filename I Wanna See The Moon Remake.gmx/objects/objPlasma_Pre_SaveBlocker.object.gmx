@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.cn3Save == 0)
+            <string>if (!global.cn3Theme)
 {
     instance_create(self.x, self.y, objSaveBlocker);
     instance_destroy();

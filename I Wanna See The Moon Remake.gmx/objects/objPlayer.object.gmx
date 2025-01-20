@@ -142,13 +142,13 @@ if (!place_free(x, y))
     }
 }
 
-if (!global.blocksCrush)
-{
-    scrDynamicCollision(false);
-}
-else if (global.dieInBlock)
+if (global.blocksCrush)
 {
     scrDynamicCollision(false, scrKillPlayer);
+}
+else
+{
+    scrDynamicCollision(false);
 }
 </string>
           </argument>

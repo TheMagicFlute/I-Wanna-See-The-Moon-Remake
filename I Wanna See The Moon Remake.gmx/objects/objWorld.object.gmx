@@ -188,7 +188,7 @@ if (global.gameStarted)
             scrLoadGame(false);    //Load the game
         }
         
-        if ( (global.timeWhenDead || instance_exists(objPlayer)) &amp;&amp; !(!global.timeWhenCleared &amp;&amp; global.gameClear) || room == rDiffSelect)    //Increment timer
+        if ( (global.timeWhenDead || instance_exists(objPlayer)) &amp;&amp; !(!global.timeWhenCleared &amp;&amp; global.gameClear))    //Increment timer
         {
             global.timeMicro += delta_time;
             global.time += global.timeMicro div 1000000;
@@ -306,6 +306,18 @@ if (global.debugMode &amp;&amp; global.gameStarted &amp;&amp; !global.gamePaused
             room_speed = 500;
         }
         else { room_speed = 50; }
+        
+        if (keyboard_check_pressed(vk_enter))
+        {
+            if (global.diff == 0)
+            {
+                global.diff = 1;
+            }
+            else
+            {
+                global.diff = 0;
+            }
+        }
     }
     
     if (keyboard_check_pressed(vk_pageup) &amp;&amp; room != room_last)    //Go to next room
@@ -378,7 +390,8 @@ if (keyboard_check_pressed(vk_f5) &amp;&amp; !global.gamePaused) //Reset window 
 
 if (keyboard_check_pressed(vk_backspace) &amp;&amp; !global.gamePaused)    //Toggle debug overlay
 {
-    global.debugOverlay = !global.debugOverlay;
+    if (global.debugMode)
+       global.debugOverlay = !global.debugOverlay;
     global.showONLINEinfo = !global.showONLINEinfo;
 }
 
@@ -386,6 +399,29 @@ if (keyboard_check(vk_control) &amp;&amp; keyboard_check_pressed(ord("M")) &amp;
 {
     scrToggleMusic();
     scrSaveConfig();
+}
+
+if (keyboard_check_pressed(vk_f12))
+{
+    dev_pwd = get_string("Input the password to enable dev mode, leave empty for disable.","");
+    if (dev_pwd == global.developPassword)
+    {
+        global.debugMode = true;
+        global.debugOverlay = true;
+        global.debugNoDeath = true;
+        global.debugInfJump = true;
+    }
+    else if (dev_pwd == "")
+    {
+        global.debugMode = false;
+        global.debugOverlay = false;
+        global.debugNoDeath = false;
+        global.debugInfJump = false;
+    }
+    else
+    {
+        show_message("Password is wrong.");
+    }
 }
 </string>
           </argument>
@@ -883,6 +919,7 @@ if (global.checkForUpdates)
 volumeTimer = 0;
 volumeDelay = 10;
 var global.playerCanShootSave = true;
+var dev_pwd = "";
 
 room_goto_next();
 </string>
@@ -1180,11 +1217,11 @@ if (global.showONLINEinfo)
         drawONLINE_enabled = global.__ONLINE_ENABLED;
         if (!global.gamePaused)
         {
-            scrDrawTextOutline(xOff,240,"ONLINE enabled: "+string(drawONLINE_enabled),c_white,c_black);
-            scrDrawTextOutline(xOff,260,"Plaer Name: "+drawName,c_white,c_black);
-            scrDrawTextOutline(xOff,280,"Server: "+drawServer,c_white,c_black);
-            scrDrawTextOutline(xOff,300,"Team: "+drawTeam,c_white,c_black);
-            scrDrawTextOutline(xOff,320,"Racing Mode: "+drawRace,c_white,c_black);
+            scrDrawTextOutline(xOff,300,"ONLINE enabled: "+string(drawONLINE_enabled),c_white,c_black);
+            scrDrawTextOutline(xOff,320,"Plaer Name: "+drawName,c_white,c_black);
+            scrDrawTextOutline(xOff,340,"Server: "+drawServer,c_white,c_black);
+            scrDrawTextOutline(xOff,360,"Team: "+drawTeam,c_white,c_black);
+            scrDrawTextOutline(xOff,380,"Racing Mode: "+drawRace,c_white,c_black);
         }
     }
 }

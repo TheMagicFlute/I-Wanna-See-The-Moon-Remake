@@ -42,7 +42,7 @@ if (global.difficulty &gt; difficulty)  //Destroy the save if on too high diffic
     instance_destroy();
 }
 
-if (global.cn3Save == 0)
+if (!global.cn3Theme)
 {
     instance_destroy();
     if(grav == 1)

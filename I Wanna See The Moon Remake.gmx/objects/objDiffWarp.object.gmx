@@ -25,9 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited();
-roomTo = rPre;
-mode = -1;
+            <string>mode = -1;
 </string>
           </argument>
         </arguments>
@@ -83,7 +81,7 @@ event_inherited();
             <kind>1</kind>
             <string>global.diff = mode;
 
-event_inherited();
+scrStartNewGame();
 </string>
           </argument>
         </arguments>
