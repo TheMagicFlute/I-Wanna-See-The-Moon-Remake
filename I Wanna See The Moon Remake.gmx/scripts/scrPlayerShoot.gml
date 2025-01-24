@@ -32,25 +32,21 @@ else if instance_exists(objKeypickControl) && objKeypickControl.keyCount[K.MASTE
         audio_play_sound(sndMaster,0,0)
     }
 }
-else if (instance_number(objBullet) < 4)
+else if (instance_number(objBullet) + instance_number(objFireBullet) < 4)
 {
     if (room == rConvels_Frozen && global.fireBullet)
     {
-        if global.dotkid {
-            instance_create(x, y - 2 * global.grav, objFireBullet);
-        }
-        else {
-            instance_create(x, y - 3 * global.fixBulletHeight, objFireBullet);
-        }
+        bullet = objFireBullet;
     }
     else
     {
-        if global.dotkid {
-            instance_create(x, y - 2 * global.grav, objBullet);
-        }
-        else {
-            instance_create(x, y - 3 * global.fixBulletHeight, objBullet);
-        }
+        bullet = objBullet;
+    }
+    if global.dotkid {
+        instance_create(x, y - 2 * global.grav, bullet);
+    }
+    else {
+        instance_create(x, y - 3 * global.fixBulletHeight, bullet);
     }
     audio_play_sound(sndShoot, 0, false);
 }

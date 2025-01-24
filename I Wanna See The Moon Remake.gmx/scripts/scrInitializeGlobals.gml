@@ -75,6 +75,7 @@ global.dotkid = false;
 global.telekid = false;
 global.playerV = false;
 global.invertControls = false;
+global.bowEnabled = true;       // control whether to enable the bow
 
 global.count = 0; //Oscillation timer
 
