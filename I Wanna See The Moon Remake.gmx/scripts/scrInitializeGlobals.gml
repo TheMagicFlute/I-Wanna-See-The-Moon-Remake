@@ -28,9 +28,9 @@ globalvar skin;
 skin = SKIN.DEFAULT;
 global.dotkid = false;
 global.fireBullet = false; // false: disabled; true: can shoot fire bullets
-global.frozenNeedleDestroyed = false; // false: not destroyed; true: destroyed
 global.forestSpdUp = false; // false: disabled; true: enable the spd up line
 global.forestPlatform = false; // false: disabled; true: can go to the ocean
+global.frozenLastSpikeDestroyed = false; // false: not destroyed; true: destroyed
 global.cloudEye = false; // false: disabled; true: can enter the castle
 global.keyToSpecticalSpace = false; // false: disabled; true: enable the key
 global.DoorToSpecticalSpaceDestroyed = false; // false: not destroyed; true: destroyed
@@ -41,9 +41,9 @@ global.water = ds_map_create(); // control the ocean water
 // Bosses and Assassins variables (use these to instead of the bosses array)
 global.boss1 = false;
 global.boss2 = false;
-global.assassins1 = false;
-global.assassins2 = false;
-global.assassins3 = false;
+global.assassin1 = false;
+global.assassin2 = false;
+global.assassin3 = false;
 global.boss3 = false;
 global.boss4 = false;
 global.boss5 = false;

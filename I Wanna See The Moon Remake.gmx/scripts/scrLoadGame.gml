@@ -54,6 +54,7 @@ global.gameClear = global.saveMap[? "gameClear"];
 
 //LOAD NEW SAVED VALUES HERE
 global.diff = global.saveMap[? "diff"];
+global.fireBullet = global.saveMap[? "fireBullet"];
 global.playerColor = global.saveMap[? "playerColor"];
 skin = global.saveMap[? "skin"];
 global.dotkid = global.saveMap[? "dotkid"];
@@ -61,6 +62,7 @@ global.bowEnabled = global.saveMap[? "bowEnabled"];
 global.canViewMap = global.saveMap[? "canViewMap"];
 global.forestSpdUp = global.saveMap[? "forestSpdUp"];
 global.forestPlatform = global.saveMap[? "forestPlatform"];
+global.frozenLastSpikeDestroyed = global.saveMap[? "frozenLastSpikeDestroyed"];
 
 var player = instance_create(global.saveMap[? "playerX"], global.saveMap[? "playerY"], objPlayer);
 // show_message("Load Y: " + string(objPlayer.y));

@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>976</w>
+    <w>1016</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>-54</xoffset>
-    <yoffset>636</yoffset>
+    <xoffset>1606</xoffset>
+    <yoffset>76</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="bgOcean" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -311,7 +311,7 @@
     <instance objName="objTrigger" x="416" y="728" name="inst_CAB56A70" locked="0" code="trg = 0;&#xA;destroy = true;" scaleX="3" scaleY="0.25" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="-32" y="928" name="inst_50FB0DE7" locked="0" code="" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="3968" y="1024" name="inst_33E26AF5" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="objOutsideRoomChanger" x="1952" y="0" name="inst_0E972B4F" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="1952" y="0" name="inst_0E972B4F" locked="0" code="roomTo = rConvels_Frozen;&#xA;//warpX = 1;&#xA;//warpY = 1;&#xA;" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBadBlock" x="1568" y="1056" name="inst_6B20D5A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBadBlock" x="1568" y="1088" name="inst_A2EB8890" locked="0" code="sndPlay = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBadBlock" x="1568" y="1120" name="inst_6150CA24" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -389,6 +389,7 @@
     <instance objName="objOceanTrapBlock0" x="1984" y="416" name="inst_90050165" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOceanTrapBlock0" x="1984" y="448" name="inst_A2D70A03" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOceanPlatformLast" x="1760" y="176" name="inst_E81F7D71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBoard" x="1680" y="448" name="inst_04D0EEA4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bAllTiles" x="0" y="1056" w="32" h="32" xo="0" yo="0" id="10009485" name="inst_8952C7FA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

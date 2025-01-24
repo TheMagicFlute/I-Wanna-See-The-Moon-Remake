@@ -173,7 +173,12 @@ else
             <string>///Killer collision
 
 var killer = instance_place(x, y, objPlayerKiller)
+var diffKiller = instance_place(x, y, objDiffKiller)
 if (killer != noone)
+{
+    scrKillPlayer();
+}
+if (diffKiller != noone &amp;&amp; diffKiller.visible == true)
 {
     scrKillPlayer();
 }
@@ -228,7 +233,7 @@ if (keyboard_check_pressed(ord("B")))
     global.bowEnabled = !global.bowEnabled;
 }
 
-if (keyboard_check_pressed(ord("1")))
+if (keyboard_check_pressed(ord("1")) &amp;&amp; room != rDifficultySelect &amp;&amp; room != rDiffSelect)
 {
     if (skin != SKIN.DEFAULT)
     {
@@ -241,7 +246,7 @@ if (keyboard_check_pressed(ord("1")))
         audio_play_sound(sndCostumeSwitch, 0, false);
     }
 }
-else if (keyboard_check_pressed(ord("2")))
+else if (keyboard_check_pressed(ord("2")) &amp;&amp; room != rDifficultySelect &amp;&amp; room != rDiffSelect)
 {
     if (skin != SKIN.FULL)
     {
@@ -254,7 +259,7 @@ else if (keyboard_check_pressed(ord("2")))
         audio_play_sound(sndCostumeSwitch, 0, false);
     }
 }
-else if (keyboard_check_pressed(ord("3")))
+else if (keyboard_check_pressed(ord("3")) &amp;&amp; room != rDifficultySelect &amp;&amp; room != rDiffSelect)
 {
     if (skin != SKIN.OUTLINE)
     {

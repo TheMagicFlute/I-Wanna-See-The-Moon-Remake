@@ -37,11 +37,15 @@ inst = noone;
 offDist = 0;
 offAngle = 0;
 
+//stickTo[0] = objBlock;
+//stickTo[1] = objPlayerKiller;
+//stickTo[2] = objPlatform;
+//stickTo[3] = objSlope;
+//stickTo[4] = objBlockDynamic;
 stickTo[0] = objBlock;
-stickTo[1] = objPlayerKiller;
-stickTo[2] = objPlatform;
-stickTo[3] = objSlope;
-stickTo[4] = objBlockDynamic;
+stickTo[1] = objPlatform;
+stickTo[2] = objSlope;
+stickTo[3] = objBlockDynamic;
 </string>
           </argument>
         </arguments>

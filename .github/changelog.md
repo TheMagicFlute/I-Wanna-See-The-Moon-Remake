@@ -33,3 +33,9 @@
 ## 1.2.07 (2025-01-21)
 
 1. Finish stage 03 **Convels Ocean**
+
+## 1.2.08 (2025-01-24)
+
+1. fix: disable player to change skin in rDifficultySelect & rDiffSelect
+
+2. Finish stage 04 **Convels Frozen**

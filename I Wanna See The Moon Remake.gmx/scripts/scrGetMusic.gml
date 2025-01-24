@@ -21,12 +21,11 @@ switch (room)                       //Determines which song to play
     case rConvels_Ocean:
         roomSong = global.musConvels_Ocean;
         break;
+    case rConvels_Frozen:
+        roomSong = global.musConvels_Frozen;
+        break;
 
 
-
-
-        
-    
     case rSample:                                                                                                            
         roomSong = global.stageMusic01;
         break;                      //Make sure to always put a break after setting the song

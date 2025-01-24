@@ -958,10 +958,14 @@
     <sprites name="IWSTMR">
       <sprite>sprites\sprPlayerBack</sprite>
       <sprite>sprites\sprFireBullet</sprite>
+      <sprites name="Items">
+        <sprite>sprites\sprFireBulletItem</sprite>
+      </sprites>
       <sprites name="Doors">
         <sprite>sprites\sprDoorBoss1</sprite>
         <sprite>sprites\sprDoorBoss2</sprite>
         <sprite>sprites\sprDoorToSpecticalSpace</sprite>
+        <sprite>sprites\sprForestDoor</sprite>
       </sprites>
       <sprites name="Logos">
         <sprite>sprites\sprLogoUnknown</sprite>
@@ -986,12 +990,20 @@
         <sprite>sprites\sprLogoSee_The_Moon</sprite>
       </sprites>
       <sprites name="Cherries">
+        <sprite>sprites\sprCherryPink</sprite>
+        <sprite>sprites\sprCherryMagenta</sprite>
         <sprite>sprites\sprCherryOrange</sprite>
         <sprite>sprites\sprCherryYellow</sprite>
+        <sprite>sprites\sprCherryChartreuse</sprite>
         <sprite>sprites\sprCherryGreen</sprite>
+        <sprite>sprites\sprCherryEmerald</sprite>
+        <sprite>sprites\sprCherryCyan</sprite>
         <sprite>sprites\sprCherryAzure</sprite>
         <sprite>sprites\sprCherryBlue</sprite>
         <sprite>sprites\sprCherryViolet</sprite>
+        <sprite>sprites\sprCherryMous</sprite>
+        <sprite>sprites\sprCherryGray</sprite>
+        <sprite>sprites\sprCherryBlack</sprite>
       </sprites>
       <sprites name="Spikes">
         <sprite>sprites\sprSpikeYellowUp</sprite>
@@ -1000,33 +1012,53 @@
         <sprite>sprites\sprDiffSpikeDown</sprite>
         <sprite>sprites\sprDiffSpikeLeft</sprite>
         <sprite>sprites\sprDiffSpikeRight</sprite>
+        <sprite>sprites\sprSpikeAquaUp</sprite>
+        <sprite>sprites\sprSpikeAquaDown</sprite>
+        <sprite>sprites\sprSpikeAquaLeft</sprite>
+        <sprite>sprites\sprSpikeAquaRight</sprite>
       </sprites>
-      <sprite>sprites\sprCloud</sprite>
-      <sprite>sprites\sprTree</sprite>
-      <sprite>sprites\sprTreeHead</sprite>
-      <sprite>sprites\sprTreeBody</sprite>
-      <sprite>sprites\sprPipe</sprite>
-      <sprite>sprites\sprFloor0</sprite>
-      <sprite>sprites\sprFloor1</sprite>
-      <sprite>sprites\sprBoard</sprite>
-      <sprite>sprites\sprMapViewer</sprite>
-      <sprite>sprites\sprMap</sprite>
-      <sprite>sprites\sprMonster</sprite>
-      <sprite>sprites\sprObama03</sprite>
-      <sprite>sprites\sprButtonR0</sprite>
-      <sprite>sprites\sprButtonL0</sprite>
-      <sprite>sprites\sprForstMask0</sprite>
-      <sprite>sprites\sprForestDoor</sprite>
-      <sprite>sprites\sprFloorForest0</sprite>
-      <sprite>sprites\sprFloorForest1</sprite>
-      <sprite>sprites\sprM9</sprite>
-      <sprite>sprites\sprWaterSwitcher</sprite>
-      <sprite>sprites\sprWarpBlue</sprite>
-      <sprite>sprites\sprWarpGreen</sprite>
-      <sprite>sprites\sprOceanWater</sprite>
-      <sprite>sprites\sprWaterBlock</sprite>
-      <sprite>sprites\sprOceanMonster</sprite>
-      <sprite>sprites\sprIce</sprite>
+      <sprites name="SolidItems">
+        <sprite>sprites\sprBlockFlickering</sprite>
+        <sprite>sprites\sprIce</sprite>
+        <sprite>sprites\sprWaterBlock</sprite>
+        <sprite>sprites\sprM9</sprite>
+        <sprite>sprites\sprFloor0</sprite>
+        <sprite>sprites\sprFloor1</sprite>
+        <sprite>sprites\sprFloorForest0</sprite>
+        <sprite>sprites\sprFloorForest1</sprite>
+        <sprite>sprites\sprForestMask0</sprite>
+        <sprite>sprites\sprMovingPlatformAqua</sprite>
+        <sprite>sprites\sprCloud</sprite>
+      </sprites>
+      <sprites name="Buttons">
+        <sprite>sprites\sprButtonR0</sprite>
+        <sprite>sprites\sprButtonL0</sprite>
+        <sprite>sprites\sprButtonAquaR</sprite>
+        <sprite>sprites\sprButtonAquaL</sprite>
+        <sprite>sprites\sprWaterSwitcher</sprite>
+      </sprites>
+      <sprites name="Misc">
+        <sprite>sprites\sprMapViewer</sprite>
+        <sprite>sprites\sprMap</sprite>
+        <sprite>sprites\sprTree</sprite>
+        <sprite>sprites\sprTreeHead</sprite>
+        <sprite>sprites\sprTreeBody</sprite>
+        <sprite>sprites\sprPipe</sprite>
+        <sprite>sprites\sprBoard</sprite>
+        <sprite>sprites\sprFrozenLastView</sprite>
+        <sprite>sprites\sprBlack</sprite>
+        <sprite>sprites\sprOceanWater</sprite>
+      </sprites>
+      <sprites name="Bosses">
+        <sprite>sprites\sprObama03</sprite>
+        <sprite>sprites\sprMonster</sprite>
+        <sprite>sprites\sprOceanMonster</sprite>
+      </sprites>
+      <sprites name="Warps">
+        <sprite>sprites\sprWarpBlue</sprite>
+        <sprite>sprites\sprWarpGreen</sprite>
+      </sprites>
+      <sprite>sprites\sprAssassinsCleared</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -1537,12 +1569,44 @@
       <object>objects\objPlasma_fancyWarpPart</object>
     </objects>
     <objects name="IWSTMR">
+      <objects name="Signs">
+        <object>objects\objAssassinsCleared</object>
+        <object>objects\objSignAssassin1</object>
+        <object>objects\objSignAssassin2</object>
+        <object>objects\objSignAssassin3</object>
+      </objects>
+      <objects name="Cherries">
+        <object>objects\objCherry_Bound</object>
+        <object>objects\objCherryTrgFree</object>
+        <object>objects\objCherryTrgFreeCyan</object>
+        <object>objects\objCherryTrack</object>
+        <object>objects\objCherryShootToPlayer</object>
+      </objects>
+      <objects name="Buttons">
+        <object>objects\objButtonR</object>
+        <object>objects\objButtonL</object>
+        <object>objects\objButtonAquaR</object>
+        <object>objects\objButtonAquaL</object>
+      </objects>
+      <objects name="Blocks">
+        <object>objects\objBadBlock</object>
+        <object>objects\objBrokenBlock</object>
+        <object>objects\objBadBlockGreen</object>
+        <object>objects\objBrokenBlockGreen</object>
+        <object>objects\objInvisM9</object>
+        <object>objects\objWaterBlock</object>
+      </objects>
+      <objects name="Items">
+        <object>objects\objFireBulletItem</object>
+      </objects>
       <objects name="Doors">
         <object>objects\objDoorBoss1</object>
         <object>objects\objDoorBoss2</object>
         <object>objects\objDoorToSpecticalSpace</object>
+        <object>objects\objForestDoor</object>
+        <object>objects\objDoorToSkyTower</object>
       </objects>
-      <objects name="logos">
+      <objects name="Logos">
         <object>objects\objLogo</object>
         <object>objects\objLogoUnknown</object>
         <object>objects\objLogoEderu_Street</object>
@@ -1565,7 +1629,15 @@
         <object>objects\objLogoThe_Closing_World</object>
         <object>objects\objLogoSee_The_Moon</object>
       </objects>
-      <objects name="diff">
+      <objects name="Spikes">
+        <object>objects\objSpikeAquaUp</object>
+        <object>objects\objSpikeAquaDown</object>
+        <object>objects\objSpikeAquaLeft</object>
+        <object>objects\objSpikeAquaRight</object>
+        <object>objects\objSpikeYellowUp</object>
+        <object>objects\objSpikeYellowDown</object>
+      </objects>
+      <objects name="DifficultModeItems">
         <object>objects\objDiffKiller</object>
         <object>objects\objDiffSpikeUp</object>
         <object>objects\objDiffSpikeDown</object>
@@ -1615,7 +1687,6 @@
       </objects>
       <objects name="Forest">
         <object>objects\objForestMask0</object>
-        <object>objects\objForestDoor</object>
         <object>objects\objForestCherry</object>
         <object>objects\objForestLine</object>
         <object>objects\objForestFloorUp0</object>
@@ -1653,25 +1724,25 @@
       </objects>
       <objects name="Frozen">
         <object>objects\objIce</object>
+        <object>objects\objPlatformAqua</object>
+        <object>objects\objMoveingSpikeAquaUp</object>
+        <object>objects\objMovingSpikeDiffUp</object>
+        <object>objects\objFrozenCherryController</object>
+        <object>objects\objFrozenBreakingCherry</object>
+        <object>objects\objGravitySpikeAquaUp</object>
+        <object>objects\objFrozenLastCherry0</object>
+        <object>objects\objFrozenLastCherry1</object>
+        <object>objects\objFrozenLastSpikeAquaUp</object>
+        <object>objects\objFrozenLastBlack0</object>
+        <object>objects\objFrozenLastBlack1</object>
+        <object>objects\objFrozenLastView</object>
+        <object>objects\objFrozenTrapGravitySpikeAquaUp</object>
+        <object>objects\objFrozenTrapBlockInvis</object>
       </objects>
       <object>objects\objFireBullet</object>
       <object>objects\objDiffWarp</object>
       <object>objects\objPlayerBack</object>
       <object>objects\objBoard</object>
-      <object>objects\objBadBlock</object>
-      <object>objects\objBrokenBlock</object>
-      <object>objects\objButtonR</object>
-      <object>objects\objButtonL</object>
-      <object>objects\objCherry_Bound</object>
-      <object>objects\objBadBlockGreen</object>
-      <object>objects\objBrokenBlockGreen</object>
-      <object>objects\objCherryTrgFree</object>
-      <object>objects\objCherryTrack</object>
-      <object>objects\objInvisM9</object>
-      <object>objects\objSpikeYellowUp</object>
-      <object>objects\objSpikeYellowDown</object>
-      <object>objects\objWaterBlock</object>
-      <object>objects\objCherryShootToPlayer</object>
     </objects>
     <object>objects\objSdrTest</object>
   </objects>
@@ -1683,7 +1754,6 @@
       <room>rooms\rOptions</room>
       <room>rooms\rDifficultySelect</room>
       <room>rooms\rDiffSelect</room>
-      <room>rooms\rPre</room>
     </rooms>
     <rooms name="Sample">
       <room>rooms\rTestHub</room>
@@ -1719,10 +1789,14 @@
       </rooms>
     </rooms>
     <rooms name="IWSTMR">
+      <room>rooms\rPre</room>
       <room>rooms\rEderu_Street</room>
       <room>rooms\rCherris_Forest</room>
       <room>rooms\rConvels_Ocean</room>
       <room>rooms\rConvels_Frozen</room>
+      <rooms name="Defenders_Cave">
+        <room>rooms\rDefenders_Cave</room>
+      </rooms>
     </rooms>
     <room>rooms\rTemplate</room>
   </rooms>

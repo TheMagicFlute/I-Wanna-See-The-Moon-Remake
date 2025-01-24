@@ -57,6 +57,7 @@ if (savePosition)
     
     //ADD NEW SAVED VALUES HERE
     global.saveMap[? "diff"] = global.diff;
+    global.saveMap[? "fireBullet"] = global.fireBullet;
     global.saveMap[? "playerColor"] = global.playerColor;
     global.saveMap[? "skin"] = skin;
     global.saveMap[? "dotkid"] = global.dotkid;
@@ -64,7 +65,7 @@ if (savePosition)
     global.saveMap[? "canViewMap"] = global.canViewMap;
     global.saveMap[? "forestSpdUp"] = global.forestSpdUp;
     global.saveMap[? "forestPlatform"] = global.forestPlatform;
-    
+    global.saveMap[? "frozenLastSpikeDestroyed"] = global.frozenLastSpikeDestroyed;
 }
                      
                               

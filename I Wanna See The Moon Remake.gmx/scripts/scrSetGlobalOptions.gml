@@ -1,7 +1,7 @@
 ///Sets configurable global options
 
 //Debug
-global.debugMode = false;               //Enables debug keys (check objWorld step to see all of them), make sure to set this to "false" before releasing your game
+global.debugMode = true;               //Enables debug keys (check objWorld step to see all of them), make sure to set this to "false" before releasing your game
 global.debugVisuals = false;            //Enables changing the color/alpha of player when infjump/god mode are toggled, make sure to disable this if you want to change the player's image_alpha or image_blend
 global.debugControl = false;            //Sets whether to require control to be held for certain debug options (used to prevent accidental usage of debug binds with things such as numpadding, or fat fingering)
 global.debugDeathSpeed = 50;            //Sets how many frames after getting hit for god mode to effect the player (50 frames = 1 second, 1 frame = chainsaw mode)
@@ -11,7 +11,7 @@ global.developPassword = "TMF1024";     //Sets the password for enabling develop
 global.checkForUpdates = true;
 global.forceUpdate = false;              //if it is on and the game is outdated, the game will force quit and open the download page
 global.versionDataUrl = "https://raw.githubusercontent.com/TheMagicFlute/I-Wanna-See-The-Moon-Remake/refs/heads/main/IWSTMR-current-version.json";
-global.gameVersion = "1.2.07";
+global.gameVersion = "1.2.08";
 
 //Menu
 global.menuMode = 0;                //Sets whether to use a warp room or a menu for selecting the game's difficulty (0 = warp room, 1 = menu)
@@ -19,7 +19,7 @@ global.menuSound = sndJump;         //Sets what sound to use for navigating the 
 
 //World
 global.startRoom = rPre;            //Sets which room to begin with
-// global.startRoom = rTestHub;     // For Test
+// global.startRoom = rConvels_Frozen;           // For Test
 global.roomCaptionDef = "I Wanna See The Moon Remake v" + global.gameVersion;  //Sets default window caption (only works with the Professional version of Studio)
 global.deathMusicMode = 1;          //Sets whether or not to play death music when the player dies (0 = no death music, 1 = instantly pause current music, 2 = fade out current music)
 global.pauseDelayLength = 40;       //Sets the delay in frames in which the player can pause/unpause the game (can be set to 0 to disable pause delay)
@@ -36,8 +36,8 @@ global.strictSaveBlockers = true;   //Bullets check for saveblocker collision wh
 global.fixBulletHeight = true;      //Spawns bullets 3px higher, accurate to where the gun is.
 
 //Items
-global.secretItemTotal = 0;         //Sets how many secret items for the game to save/load
-global.bossItemTotal = 0;           //Sets how many boss items for the game to save/load
+global.secretItemTotal = 9;         //Sets how many secret items for the game to save/load
+global.bossItemTotal = 9;           //Sets how many boss items for the game to save/load
 global.autosaveSecretItems = false; //Sets whether to save secret items immediately when you grab them or if you have to hit a save
 
 //Controller
@@ -53,9 +53,9 @@ global.difficultyNames[3] = "Hard";
 global.difficultyNames[4] = "Death";
 
 //Savefiles
-global.extraSaveProtection = false; //Sets whether to use the ds_map_secure functions for saving/loading (improves save security and prevents transferring between PCs)
+global.extraSaveProtection = true; //Sets whether to use the ds_map_secure functions for saving/loading (improves save security and prevents transferring between PCs)
 global.md5StrAdd = "TheMagicFlute_FarmerStewie"; //sets what to add to the end of md5 input string to make the save harder to mess with, can be changed to anything, should be set to something unique and hard to predict (like setting a password)
 
-global.cn3Theme = true; // let the style of these save points change to CN3 style
+global.cn3Theme = true;     // let the style change to CN3 style
 global.dotkidUnlock = true; // enable to change to the dotkid be unlocked
-global.bowEnabled = false; // control whether to enable the bow
+global.bowEnabled = false;  // control whether to enable the bow

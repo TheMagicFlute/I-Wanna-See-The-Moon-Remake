@@ -281,7 +281,10 @@ if (global.debugMode &amp;&amp; global.gameStarted &amp;&amp; !global.gamePaused
             with (objPlayer)
             {
                 scrSaveGame(true);
-                var snd = audio_play_sound(sndItem, 0, false);
+                if (global.cn3Theme)
+                    var snd = audio_play_sound(sndPlasma_SaveSound, 0, false);
+                else
+                    var snd = audio_play_sound(sndItem, 0, false);
                 audio_sound_gain(snd, 0.5, 0);
             }
         }

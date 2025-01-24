@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 1/15;
-var trg = -1;
+            <string>image_speed = 1 / 15;
+trg = -1;
 
 v = 0;
 h = 0;
@@ -52,11 +52,10 @@ h = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (vspeed == 0 &amp;&amp; hspeed == 0 &amp;&amp; global.trigger[? trg] == true)
+            <string>if (vspeed == 0 &amp;&amp; hspeed == 0 &amp;&amp; global.trigger[? trg])
 {
     vspeed = v;
     hspeed = h;
-    //global.trigger[? trg] = false;
 }
 </string>
           </argument>

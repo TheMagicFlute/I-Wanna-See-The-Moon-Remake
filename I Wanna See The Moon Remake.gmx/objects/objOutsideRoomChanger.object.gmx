@@ -32,48 +32,6 @@ event_inherited();
 smooth = false;   //sets whether the player wraps around the screen for a smooth transition to the next room (this requires the room sizes to be the same)
 offsetX = 0;
 offsetY = 0;
-
-dkFlag = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (instance_exists(objPlayer))
-{
-    if (   objPlayer.x &lt; bbox_left
-        &amp;&amp; objPlayer.x &gt; bbox_right
-        &amp;&amp; objPlayer.y &lt; bbox_top
-        &amp;&amp; objPlayer.y &gt; bbox_bottom)
-    {
-        dkFlag = false;
-    }
-    
-    if (!scrInRange(objPlayer.x, 3, room_width - 3) || !scrInRange(objPlayer.y, 3, room_height - 3))
-    {
-        if (dkFlag)
-        {
-            event_user(0);
-        }
-    }
-}
 </string>
           </argument>
         </arguments>
@@ -96,7 +54,30 @@ dkFlag = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!scrInRange(other.x, 3, room_width - 3) || !scrInRange(other.y, 3, room_height - 3))  //if outside room
+            <string>if (global.dotkid &amp;&amp; (!scrInRange(other.x, 3, room_width - 3) || !scrInRange(other.y, 3, room_height - 3)))  //dk
+{
+    if (!smooth)
+    {
+        event_user(0);
+    }
+    else
+    {
+        if (other.x &lt; 0)
+            { other.x += room_width; }
+        if (other.x &gt; room_width)
+            { other.x -= room_width; }
+        if (other.y &lt; 0)
+            { other.y += room_height; }
+        if (other.y &gt; room_height)
+            { other.y -= room_height; }
+            
+        other.x += offsetX;
+        other.y += offsetY;
+        
+        room_goto(roomTo);
+    }
+}
+if (!scrInRange(other.x, 0, room_width) || !scrInRange(other.y, 0, room_height))  //if outside room
 {
     if (!smooth)
     {

@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspeed = objOceanPlatformLast.hspeed;
+            <string>/// fix the position
+x = objOceanPlatformLast.x;
 </string>
           </argument>
         </arguments>
@@ -48,7 +49,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspeed = objOceanPlatformLast.hspeed;
+            <string>event_inherited();
+hspeed = objOceanPlatformLast.hspeed;
 </string>
           </argument>
         </arguments>
