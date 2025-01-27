@@ -39,3 +39,11 @@
 1. fix: disable player to change skin in rDifficultySelect & rDiffSelect
 
 2. Finish stage 04 **Convels Frozen**
+
+## 1.2.09 (2025-01-27)
+
+1. change Global Game Settings
+
+2. fix: fix the bug that let the objCherryShootToPlayer self destroy when the player is dead
+
+3. add tiles for stage 05 **Defender's Cave** and finish part of it

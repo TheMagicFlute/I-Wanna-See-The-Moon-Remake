@@ -1077,6 +1077,7 @@
         <background>background\bgForest</background>
         <background>background\bgOcean</background>
         <background>background\bgFrozen</background>
+        <background>background\bgCave</background>
       </backgrounds>
       <backgrounds name="tiles">
         <background>background\bgDarkBlue</background>

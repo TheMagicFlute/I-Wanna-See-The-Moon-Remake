@@ -24,6 +24,9 @@ switch (room)                       //Determines which song to play
     case rConvels_Frozen:
         roomSong = global.musConvels_Frozen;
         break;
+    case rDefenders_Cave:
+        roomSong = global.musDefenders_Cave;
+        break;
 
 
     case rSample:                                                                                                            

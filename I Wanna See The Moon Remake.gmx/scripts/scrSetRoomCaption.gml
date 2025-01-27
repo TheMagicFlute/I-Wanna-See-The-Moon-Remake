@@ -7,20 +7,20 @@ if (global.gameStarted)
 {
     roomCaption += " -"
     if (global.difficulty == 0)
-        roomCaption += " Easy ";
+        roomCaption += " [Easy] ";
     else if (global.difficulty == 1)
-        roomCaption += " Normal ";
+        roomCaption += " [Normal] ";
     else if (global.difficulty == 2)
-        roomCaption += " Hard ";
+        roomCaption += " [Hard] ";
     else if (global.difficulty == 3)
-        roomCaption += " Death ";
+        roomCaption += " [Death] ";
 
     if (global.diff == 0)
-        roomCaption += " Normal Mode";
+        roomCaption += "Normal Mode";
     else if (global.diff == 1)
-        roomCaption += " Difficult Mode";
+        roomCaption += "Difficult Mode";
 
-    roomCaption += " -"
+    roomCaption += " -";
     roomCaption += " Deaths: " + string(global.death);
     roomCaption += " Time: ";
     

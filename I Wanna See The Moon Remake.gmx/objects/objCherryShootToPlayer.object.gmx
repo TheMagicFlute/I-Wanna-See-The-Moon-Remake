@@ -26,8 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0;
-move_towards_point(objPlayer.x, objPlayer.y, 5);
-audio_play_sound(sndShoot, 0, false);
+if (instance_exists(objPlayer))
+{
+    move_towards_point(objPlayer.x, objPlayer.y, 5);
+    audio_play_sound(sndShoot, 0, false);
+}
+else
+{
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>

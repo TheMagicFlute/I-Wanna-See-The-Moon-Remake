@@ -17,7 +17,7 @@ Using framework [Not Another Needle Engine](https://github.com/pieceofcheese87/s
 2. Extract the zip file
 3. Run the game
 
-## oprations
+## controls
 
 - Move: right arrow key or left arrow key
 - Jump: shift key
@@ -39,7 +39,7 @@ try up arrow key and down arrow key to change the color of full colored player a
 - [X] Stage 01: Ederu Street
 - [X] Stage 02: Cherris Forest
 - [X] Stage 03: Convels Ocean
-- [ ] Stage 04: Convels Frozen
+- [X] Stage 04: Convels Frozen
 - [ ] Stage 05: Defender's Cave
 - [ ] Boss1
 - [ ] Stage 06: Cloud Park

@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>870</w>
+    <w>992</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>0</page>
-    <xoffset>-171</xoffset>
-    <yoffset>636</yoffset>
+    <page>3</page>
+    <xoffset>-101</xoffset>
+    <yoffset>703</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="bgFrozen" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -175,7 +175,7 @@
     <instance objName="objIceBlock" x="4320" y="896" name="inst_E1614775" locked="0" code="" scaleX="5" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objIceBlock" x="4192" y="992" name="inst_0E65EFC1" locked="0" code="" scaleX="9" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objOutsideRoomChanger" x="5568" y="1088" name="inst_0C9D9D39" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="objOutsideRoomChanger" x="0" y="960" name="inst_CDD99483" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="objOutsideRoomChanger" x="0" y="960" name="inst_CDD99483" locked="0" code="roomTo = rDefenders_Cave;&#xA;" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objSaveVHard" x="2080" y="64" name="inst_A296297F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSaveVHard" x="2544" y="960" name="inst_2DEE382E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSaveVHard" x="720" y="640" name="inst_DD166213" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -618,6 +618,8 @@
     <instance objName="objBlockFake" x="704" y="928" name="inst_1021B85D" locked="0" code="sprite_index = sprIce;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlockFake" x="704" y="960" name="inst_BB49CBC5" locked="0" code="sprite_index = sprIce;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlockFake" x="704" y="992" name="inst_B0AA750B" locked="0" code="sprite_index = sprIce;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveBlocker" x="2208" y="64" name="inst_56687EB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSaveBlocker" x="2816" y="736" name="inst_C06A89A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bgAqua" x="0" y="1056" w="32" h="32" xo="0" yo="0" id="10011439" name="inst_5E41EF27" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
